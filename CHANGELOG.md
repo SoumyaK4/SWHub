@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.2.7
+- Added public vesion weekly update checks at launch, verified platform downloads, installation handoff, and release notes on the first launch after updating. Android uses its system installer, Linux replaces the AppImage, Windows preserves installer/portable packaging, and macOS uses signed Sparkle updates.
+- Made desktop shortcut settings searchable by action, page, and key, with an enabled-only filter, visible suggested keys for disabled actions, direct reassignment, and cancellable recording. Added seven shortcuts for main-page tool launches and Local Board pass, variation mode, and KataGo analysis.
+- Aligned KataGo and saved-review Details with the next recorded move and the board's rank-filtered recommendations. Mistake navigation stops immediately before the mistake; variation previews use the correct source position, support mouse-wheel stepping, and leave the selected game-tree node unchanged. Details text and links can be selected and copied.
+- Added manual ownership correction to score estimates: click an empty point to cycle Black, White, and neutral ownership, updating applicable totals immediately without placing a stone or rerunning the estimate. Corrections survive dead-group recalculation, and estimator window positions now persist across app restarts.
+- Fixed older cloud snapshots making completed SRS reviews due again after restart. Restores preserve locally changed schedules and graduation when the cloud entry is unchanged, apply remote review changes when the local entry is unchanged, and resolve simultaneous changes as a complete schedule. Hidden SRS queues no longer refresh while solving.
+- Made KataGo Auto Setup cancellation interrupt stalled network operations, added network timeouts, and improved redirect handling.
+- Prepared cloud statistics for the v0.2.8 transition: v0.2.7 uses compressed v2 sync while the server continues supporting older clients. Existing snapshots migrate on restore or upload, and retryable background batches cover inactive accounts without changing usernames or sync keys. Fixed repeated restore/conflict merges counting the same remote progress more than once.
+- Added native OGS, KGS, and IGS (Pandanet) clients in Play, with sign-in, server profiles, player and game lists, challenges and incoming requests, live play, spectating, chat, and game records.
+- Unified server workspaces with labeled desktop navigation, compact mobile drawers, responsive filters, and server branding. Improved live-game reconnection, clock and overtime handling, handicap starts, pending-move feedback, and server-authorized game controls.
+- Added shared game-record actions for Review in SWHub, Open in KataGo, Open in AI Sensei, and Download SGF. Fixed KGS archive dates/revisions and private-record fallbacks, Pandanet archive discovery and SGF retrieval, and OGS historical-game chat and review links.
+- Added native OGS review discovery, creation, viewing, and authoring, including a visual game tree, variations, setup stones, comments, labels, shapes, territory, and pen drawing. Local exploration stays separate from the presenter, and publishing requires server-granted control. Live analysis respects the server's game restrictions.
+- Moved public playing-profile charts from Game Focus onto Me below the training heatmap, replacing the type radar and separate Profile shortcut. Full training breakdowns remain in Puzzles > Statistics, and profile charts are included in Share stats.
+- Consolidated rank-guided analysis and unranked Career practice into the normal KataGo page. Rank guide supports 20k–9d and the current Career rank, rank-aware overlays and reports, and unrecorded practice with configurable teaching auto-undo.
+- Refined ranked Career's HumanSL opponents and added distinct names to ordinary KataGo bots while retaining their strategy descriptions. Improved HumanSL style-estimate performance and analysis-hover responsiveness.
+- Added a saved Game Focus target-rank selector, defaulting to the recorded player rank. New analysis or reanalysis can use a chosen 20k–9d target for accepted answers, drills, and saved overlays without altering imported ranks or the independent dashboard rank estimate.
+- Added analyzed-game tags such as Comeback, Epic Comeback, Dragon Slaying, Perfect Play, and Rollercoaster, derived from saved analysis and game replay without extra engine queries.
+- Added bulk Game Focus drill export by all/due drills, phase, or region, deduplicating overlapping categories and preserving setup stones, turns, answers, and variations in multi-game SGF files. Saved reviews continue to work offline, with stronger-rank overlays limited to the evidence stored during analysis.
+- Started Game Focus on a fresh `game_focus_v2.db`. The previous `game_focus.db` is not automatically imported; keep it as a backup and reimport/reanalyze source games for the new library. Training statistics remain in their separate database.
+- Hardened local and remote KataGo startup, readiness, cancellation, reconnection, and query cleanup. Game Focus now reports startup progress and exhausted connection attempts instead of leaving analysis queues apparently running, and closed pages cannot revive obsolete engine sessions.
+- Updated KataGo Auto Setup with hardware-aware backend selection, verified downloads, readiness checks, cancellation, benchmarking, and cached thread/batch tuning. CUDA setup uses v1.18.2, with backend-specific releases for other hardware; TensorRT still requires manual setup.
+- Updated Colab and Modal analysis/contribution workflows to KataGo v1.18.2 CUDA, repaired runtime dependencies and launch fallbacks, added reusable Google Drive caching for analysis, and isolated remote query IDs and cancellation between WebSocket sessions.
+- Added rectangular-board viewing for KataGo Contribution, reliable Finish & stop shutdown, and clearer buffered-game counters that distinguish locally retained viewer games from contribution/upload totals.
+- Added local board-photo import to Local Board and Image to SGF in KataGo. Align four corners, set full or partial grid dimensions, correct detected stones, choose the next player, and confirm the position before replacing the board. Detection runs on the device.
+- Reworked the shared local score estimator around Monte Carlo ownership estimates, background calculation, rule-aware score totals, and whole-group dead/alive correction. Its movable, resizable window keeps the board usable and scores a stable position snapshot until reopened.
+- Added custom board, black-stone, and white-stone images in Appearance. Applied global coordinate settings across boards and corrected overlay alignment with realistic stone placement.
+- Centralized desktop keyboard shortcuts into page cards with enable, rebind, reset, disable, and conflict checks. Bindings start disabled, text editing is protected, and mouse-wheel navigation remains independent with Shift for ten moves and Ctrl for start/end.
+- Expanded voice prompts to English, Chinese, Spanish, Japanese, Korean, and Russian, with two randomized stone-sound pools and migration of older sound selections.
+- Added the Custom Exam option Only new tasks, without repeats, excluding previously solved tasks and using each eligible task once. Requests support up to 10,000 tasks, cap at the available unique pool, and preserve the option in presets.
+- Added 750 Korean Problem Academy problems across four volumes and refreshed collection ordering.
+- Improved compact board layouts, shared review controls, high-frequency redraw performance, rounded notifications, and app-bar color consistency. Organized the in-app FAQ into topic pages and expanded translation coverage across all eight locales.
+- Hardened the KataGo Colab/Modal notebooks with pinned dependencies and verified atomic downloads, a medium-transformer analysis default, current b28/b40 presets, one-container Modal cost controls, direct Quick Tunnel monitor polling, complete remote-query cleanup/error reporting, safe single-session Colab contribution startup, and executable generated-Python validation.
+- Added persistent Google Drive caching to the contribution Colab while keeping KataGo execution local to the runtime and excluding temporary downloads and credentials from the cache.
+
 ## 0.2.6+78
 - Added a cumulative estimated HumanSL rank to Game Focus Dashboard Home. Each completed rank-aware analysis contributes a bounded phase-balanced sample of the app user's moves across 20k–9d, and deleting a game immediately removes its evidence from the recalculated estimate.
 - Made Game Focus rank-aware analysis status accurate, including explicit partial/unavailable objective fallbacks, and normalized OGS numeric rankings so unclear SGF ranks can use the discovered account rank.
@@ -125,130 +159,7 @@
 - Improved Local Board and task editor with Japanese score estimation, dead-stone detection, variation persistence, tree-view visibility, and visual feedback.
 - Added mouse-scroll board navigation, auto-next/auto-remove-mistakes behavior, and decoupled task sidebar work.
 - Improved board/server performance and time synchronization.
+- Added early development documentation and task-topic guidance.
 
-## 0.1.13 : The SADGE update
-- add timeout problems to exam review and stats (@Cidragon)
-- add more Collections
-- remove Topic feature
-- removed about 134815 tsumegos
-- Start of SWHub Public
-
-## 0.1.12
-- Ukrainian localization (@vabue)
-- OGS: fix bug where correspondence games would be resumed (@benjaminpjones)
-- OGS: fix byoyomi update bug (@benjaminpjones)
-- improve login error descriptions (@benjaminpjones)
-- set iOS app audio as background to avoid interruptions (@adudenamedruby)
-- persist local board state on shared preferences
-- add exam and task type charts to statistics
-- fix: task title overflow
-- add result page for exams and collections
-- add Custom Exam presets
-- improve selection granularity of task topics
-- add setting for hiding players' rank (@adudenamedruby)
-- add fullscreen setting for mobile platforms
-
-## 0.1.11
-- OGS support (@benjaminpjones)
-- add setting to track Time Frenzy mistakes (@hemme)
-- add option to copy task SGF (@hemme)
-- accessibility: add setting to show wrong moves as crosses (@hemme)
-- Italian localization (@hemme)
-- Romanian localization (@adudenamedruby)
-- German localization (@StHagel, @InfoKendoKing)
-- next task can be triggered with a swipe gesture where applicable
-- add setting for randomizing task orientation (@hemme)
-
-## 0.1.10
-- now available in Chinese (simplified), Russian and Spanish
-- add task search by pattern
-- add help dialogs for several pages
-- show current rank for each topic
-- fix topic progress display bug when returning to topic page
-- fix timezone bug in statistics
-- new theme: BadukTV
-- remove experimental 9x9 human-like AI bot 
-- remove a few broken tasks
-- Start of SWHub Private
-
-## 0.1.9
-- add Next button for topic exams 
-- fix: redo button bug on custom exams
-- fix: disable start custom exam if there are no tasks available
-- fix: custom exam reports more mistakes than available
-- fix many broken tasks
-- improve overall routing/navigation
-- improve statistics page: daily/weekly/monthly stats
-- new themes by Pumu
-- experimental: 9x9 human-like AI bot 
-- improved sound settings
-
-## 0.1.8
-- add file picker dialog to save games on desktop
-- add task topics
-- fix: starting a collection warns about ongoing sessions
-- fix: collections page refreshes after exiting current session
-- add mode to try custom moves in tasks
-- add Custom Exam mode
-- fix several broken tasks
-
-## 0.1.7
-- hotfix for Windows game downloads
-
-## 0.1.6
-- add My Mistakes page
-- add Collections page
-- download games to Downloads directory on all desktop platforms
-- fix several broken tasks
-- fix always-black-to-play setting
-- fix broken game sharing on iPad
-- fix missing last-move annotation when rejoining game
-- fix receiving counting requests from opponents on foxwq
-- improve disconnection handling on mobile platforms
-- display player online status during games
-
-## 0.1.5
-- fix several broken tasks
-- add Endgame Exam mode
-- add setting to set all tasks as black-to-play
-- add task share link and Find Task mode
-- improved stone assets (thanks @Eraleis!)
-- save SGF from local board
-- improve download and parsing of Fox games
-
-## 0.1.4
-- fix several broken and duplicated tasks
-- update Tygem automatch presets to match the official client
-- add Windows VS Redistributable files to installer
-- make downloading games more responsive
-- use an older GitHub runner for Linux builds (based on Ubuntu 22.04)
-
-## 0.1.3
-- remove Register button for iOS and MacOS due to Apple guidelines
-- logout support
-- add button to show task continuations (correct and wrong variations)
-
-## 0.1.2
-- recent results and rank up/down requirements
-- refresh game record automatically after games
-- fix: refresh issue caused opponent's move to not show up on ranked mode
-- add board navigation keyboard shortcuts
-- fix: rank display issue in ranked mode
-- clear ghost stone when tapping a occupied point
-- add buttons to redo and go to next rank grading exam
-
-## 0.1.1
-- game list, download and AI Sensei sharing
-- grading exam result now shows the average time per task as well
-- add a task solving response delay setting
-- fix: grading exam counts as failed when exiting in the middle of it
-- fix: remove ghost stone from captured stones
-- fix: do not spam result banner after solving a task
-- relax disconnection threshold for foxwq
-
-## 0.1.0+3
-
-- fix: show hovering stone only when it's your turn during games
-- fix: result banner doesn't get in the middle of the next button in wide layout
-- settings page refactored into separate sections
-- add setting to confirm moves on large boards to avoid misclicks on small screens
+## 0.1.13
+- The SADGE update of WeiqiHub
