@@ -1,6 +1,6 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 23 Aug 2026, Katago v1.18.0```
+```Last updated: 3 Oct 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 

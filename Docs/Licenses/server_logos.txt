@@ -1,0 +1,39 @@
+Server identification artwork
+============================
+
+These original assets identify the corresponding third-party services in
+SWHub's server picker and connection screens. They are not SWHub branding and
+are not relicensed under SWHub's source-code license. All applicable copyright
+and trademark rights remain with the respective owners. Public availability
+of an image is not a general-purpose redistribution license.
+
+Retrieved 2026-09-09. Image files are retained byte-for-byte as downloaded;
+Flutter scales them proportionally without recoloring or cropping.
+
+OGS: assets/images/servers/ogs.png
+Owner/source: Online-Go.com
+https://github.com/online-go/online-go.com/blob/508e267c49dd87a043454cde14e0093155e9d64c/assets/ogslogo-256.png
+Downloaded from:
+https://raw.githubusercontent.com/online-go/online-go.com/main/assets/ogslogo-256.png
+Upstream assets/LICENSE explicitly excludes assets from the repository's AGPL
+license and says they may have individual licenses and should not be used
+outside the Online-Go.com context without further research. This use identifies
+the actual OGS connection in SWHub; no broader asset license is asserted.
+https://github.com/online-go/online-go.com/blob/508e267c49dd87a043454cde14e0093155e9d64c/assets/LICENSE
+
+KGS: assets/images/servers/kgs.png
+Owner/source: KGS Go Server; logo linked by its official homepage and supplied
+by the user for this integration.
+https://www.gokgs.com/
+https://files.gokgs.com/images/kgsLogo.png
+No standalone permissive asset license was found on the source page.
+
+Pandanet / IGS: assets/images/servers/pandanet.png
+Owner/source: Pandanet; the official homepage's "Pandanet logo" image.
+https://pandanet-igs.com/communities/pandanet
+https://pandanet-igs.com/assets/pandalogo-e378bf0a0f7a3cc0b6afe07d7b5467ce70b5956c36fdd62de6f5ad83104ff9a1.png
+No standalone permissive asset license was found on the source page.
+
+
+Fox uses its pre-existing private local wordmark asset; it is not part of this
+public server-logo asset directory or its pubspec entry.

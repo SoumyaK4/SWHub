@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.2.8
+- Preserve all fields in mixed-column statistics imports, including local credentials and sync baselines; roll back malformed imports instead of clearing tables. Handle corrupt compressed sync uploads without unhandled stream errors, and keep Pandanet's selected room consistent after a successful switch followed by a listing failure.
+- Completed the v2-only sync cutoff. Existing usernames and sync keys remain valid; legacy-only apps must upgrade. Once an account adopts dated task data, its other devices must update their app/catalog before syncing again.
+- Remember OGS/KGS/IGS game-room sidebar width, add a persisted resizable Players section, and show dismissible pass notices over game navigation controls.
+- Added always-available Alt+left-click navigation from a visible stone to its placement in the current game tree or retained move history, including setup and captured/replayed stones, while preserving review and live-game restrictions.
+- Added an App-wide coordinate shortcut (suggested Ctrl+Shift+C) cycling inside, outside, and hidden coordinates with immediate persisted updates across boards. KataGo coordinate cycling now uses the same global preference.
+- Removed Settings-page and numbered Server workspace keyboard bindings. Variant review now uses shared Game navigation; KataGo dialog commands are listed and configurable. Fox room commands now honor the displayed enabled state instead of installing implicit defaults.
+- Kept mouse gestures independent of keyboard enablement, protected standalone modifier bindings from mouse chords, and moved the mouse reference into the FAQ while removing duplicated keyboard-only key lists. Updated README controls guidance.
+- Removed the KifuSnap board theme, existing selections fall back to Plain.
+- Prevent delayed cloud replies and queued uploads from changing a newly restored account, commit upload baselines atomically, reject malformed sync responses, and preserve local credentials during stats imports.
+- Download dated task catalogs independently of app updates, with verified first-use setup, leaderboard/sync update checks and an explicit relaunch prompt. Activate updates and migrate progress safely before cleaning old copies. Guard cloud statistics against older catalog clients overwriting newer task progress. Installed task data works offline; first use requires a download.
+- Preserve complete collection results and collection/SRS resume sessions during stats sync, keep repeated mistakes visible, retain distinct exams sharing a timestamp, reserve deleted collection IDs, and count overlapping custom-exam tags accurately.
+- Reconcile changed task catalogs, remove deleted task references from saved progress and sync, and preserve progress when task ranks/types change. Protect collection resume positions after membership changes and prevent reuse of deleted task IDs.
+- Corrected Custom Exam’s Unique tasks only option to prevent repeats within the current exam without excluding tasks solved in previous sessions. Selected filters and saved checkbox preferences are preserved.
+- Moved the Joseki dictionary out of the app bundle into a separate verified download. Download is offered when opening Joseki, Joseki includes a data-update check and offline browsing after installation. Failed updates preserve existing data.
+- Improved OGS review navigation, local comments, branch deletion, and shared variation links. Fixed KGS room/watch list updates, repeated joins, chat closing, and reconnect state; isolated IGS room refreshes and concurrent game observations.
+- Replaced SSGS with Variant Server in Play, with native guest profiles, game browsing, invitations, ongoing games, multiplayer seats, combined variants, custom/Circloid boards, hidden and Joseki setup, scoring, review, clocks, and reconnect handling.
+- Removed the SSGS client.
+- Removed external review upload actions from game records and finished games. Use Open in KataGo for analysis within SWHub.
+- Updated the optional large KataGo transformer model and Colab/Modal notebook dependencies. Fixed compatibility checks for training-site transformer names and the Linux OpenVINO fallback download checksum.
+- Added an Online game room shortcut (suggested M) to cycle move numbers through none, last, and all in OGS, KGS, and IGS, including OGS reviews.
+- Added separate size sliders for custom black and white stone images, with live preview and individual resets.
+- Split realistic stone placement into independent Fuzzy placement and Stone animation toggles, preserving existing preferences. Hover previews stay centered on intersections even with fuzzy placement enabled.
+
 ## 0.2.7
 - Added public vesion weekly update checks at launch, verified platform downloads, installation handoff, and release notes on the first launch after updating. Android uses its system installer, Linux replaces the AppImage, Windows preserves installer/portable packaging, and macOS uses signed Sparkle updates.
 - Made desktop shortcut settings searchable by action, page, and key, with an enabled-only filter, visible suggested keys for disabled actions, direct reassignment, and cancellable recording. Added seven shortcuts for main-page tool launches and Local Board pass, variation mode, and KataGo analysis.

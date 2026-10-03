@@ -4,11 +4,11 @@ Source: https://online-go.com/joseki/15081
 Project: https://github.com/online-go/online-go.com
 Snapshot retrieved: 14 August 2026
 
-SWHub bundles a transformed offline snapshot of the Online-Go.com (OGS)
+SWHub offers a separately downloaded, transformed offline snapshot of the Online-Go.com (OGS)
 Joseki Explorer position graph. The snapshot contains move sequences, move
 classifications, position descriptions, board marks, tags, links, and joseki
 source metadata obtained from the public OGS Joseki API. Public discussion
-fields and contributor identifiers are not bundled.
+fields and contributor identifiers are not included in the download.
 
 Copyright and licence status
 
