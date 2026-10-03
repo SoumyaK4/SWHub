@@ -97,7 +97,7 @@ Puzzle solving also supports multiple correct variations, optional solution cont
 - Inside, outside, or hidden coordinates across boards, independent fuzzy placement and stone animation toggles, separate custom black/white stone sizes, shadows, hover stones, custom cursors, and move numbers.
 - Separate stone, interface, and voice volumes, two randomized stone-sound pools, and English, Chinese, Spanish, Japanese, Korean, or Russian voice prompts.
 - Desktop keyboard bindings under **Settings > Keyboard shortcuts**. Search by action, page, or key, or show only enabled actions. Actions start disabled with suggested keys visible: enable one or click its key field to assign and enable another combination. Changes apply immediately, recording can be cancelled, and conflicts between actions that share a page are blocked.
-- Added shortcuts include main-page access to Local Board, Pattern Search, Joseki, and shortcut settings, plus Local Board pass, variation mode, and opening KataGo analysis. KataGo and saved reviews inherit shared Game navigation bindings unless you override them.
+- Keyboard shortcuts use six groups: Global, Board & game tree, Online play, KataGo, Puzzle solving, and Study tools. Each action shows where it works. Shared navigation, coordinates, and move numbers expose page-specific overrides; Joseki navigation is included under Board. Global includes dialog submit/dismiss, and Puzzle solving includes Try custom moves after solving. All bindings start off. Main-page, Settings-page and numbered Server workspace bindings have been removed.
 - Mouse gestures are always available independently of keyboard bindings. See **Settings > FAQ > Visuals & Controls** for the mouse reference, including Alt+left-click stone history, wheel navigation, previews, editing, scoring, and panel resizing.
 </details>
 
@@ -149,7 +149,7 @@ No. Version 0.2.8 uses compressed v2 stats sync with your existing username and 
 
 ### Where did my older Game Focus games go?
 
-Version 0.2.8 starts storing the under a folder as I've added a feature to support multiple game focus profiles.
+Version 0.2.8 starts storing these under a folder as I've added a feature to support multiple game focus profiles.
 
 ### How do I connect my playing profile?
 

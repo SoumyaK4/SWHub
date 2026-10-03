@@ -1,6 +1,11 @@
 # Changelog
 
 ## 0.2.8
+- Check for app updates on launch once 24 hours have passed since the last successful check, instead of once a week.
+- Group keyboard shortcuts into Global, Board & game tree, Online play, KataGo, Puzzle solving, and Study tools, with scope labels and nested page overrides.
+- Removed the Main page keyboard-shortcut section and its bindings, saved shortcuts from that section no longer run.
+- Make KataGo Contribution follow regular KataGo top-move label preferences, hide local contribution on Android, and show optional endpoint credentials only when endpoint login is enabled.
+- Check for puzzle-data updates when opening puzzle features, including for users without a sync account, while keeping installed puzzles usable offline.
 - Preserve all fields in mixed-column statistics imports, including local credentials and sync baselines; roll back malformed imports instead of clearing tables. Handle corrupt compressed sync uploads without unhandled stream errors, and keep Pandanet's selected room consistent after a successful switch followed by a listing failure.
 - Completed the v2-only sync cutoff. Existing usernames and sync keys remain valid; legacy-only apps must upgrade. Once an account adopts dated task data, its other devices must update their app/catalog before syncing again.
 - Remember OGS/KGS/IGS game-room sidebar width, add a persisted resizable Players section, and show dismissible pass notices over game navigation controls.
@@ -27,14 +32,16 @@
 ## 0.2.7
 - Added public vesion weekly update checks at launch, verified platform downloads, installation handoff, and release notes on the first launch after updating. Android uses its system installer, Linux replaces the AppImage, Windows preserves installer/portable packaging, and macOS uses signed Sparkle updates.
 - Made desktop shortcut settings searchable by action, page, and key, with an enabled-only filter, visible suggested keys for disabled actions, direct reassignment, and cancellable recording. Added seven shortcuts for main-page tool launches and Local Board pass, variation mode, and KataGo analysis.
+- Fixed shortcut changes taking effect only after reopening a page, arrow keys being consumed by focus traversal, and duplicate callbacks. KataGo and saved reviews now inherit shared Game navigation bindings unless explicitly overridden, with conflict checks for commands sharing a board.
 - Aligned KataGo and saved-review Details with the next recorded move and the board's rank-filtered recommendations. Mistake navigation stops immediately before the mistake; variation previews use the correct source position, support mouse-wheel stepping, and leave the selected game-tree node unchanged. Details text and links can be selected and copied.
+- Reorganized Game Focus Imports / Games into separate Analysis, Import, and Filters panels, with independently scrolling controls on wide windows and expandable sections on narrow screens. Saved-review display corrections also apply to existing analysis without rerunning KataGo.
 - Added manual ownership correction to score estimates: click an empty point to cycle Black, White, and neutral ownership, updating applicable totals immediately without placing a stone or rerunning the estimate. Corrections survive dead-group recalculation, and estimator window positions now persist across app restarts.
 - Fixed older cloud snapshots making completed SRS reviews due again after restart. Restores preserve locally changed schedules and graduation when the cloud entry is unchanged, apply remote review changes when the local entry is unchanged, and resolve simultaneous changes as a complete schedule. Hidden SRS queues no longer refresh while solving.
 - Made KataGo Auto Setup cancellation interrupt stalled network operations, added network timeouts, and improved redirect handling.
 - Prepared cloud statistics for the v0.2.8 transition: v0.2.7 uses compressed v2 sync while the server continues supporting older clients. Existing snapshots migrate on restore or upload, and retryable background batches cover inactive accounts without changing usernames or sync keys. Fixed repeated restore/conflict merges counting the same remote progress more than once.
 - Added native OGS, KGS, and IGS (Pandanet) clients in Play, with sign-in, server profiles, player and game lists, challenges and incoming requests, live play, spectating, chat, and game records.
 - Unified server workspaces with labeled desktop navigation, compact mobile drawers, responsive filters, and server branding. Improved live-game reconnection, clock and overtime handling, handicap starts, pending-move feedback, and server-authorized game controls.
-- Added shared game-record actions for Review in SWHub, Open in KataGo, Open in AI Sensei, and Download SGF. Fixed KGS archive dates/revisions and private-record fallbacks, Pandanet archive discovery and SGF retrieval, and OGS historical-game chat and review links.
+- Added shared game-record actions for Review in SWHub, Open in KataGo, and Download SGF. Fixed KGS archive dates/revisions and private-record fallbacks, Pandanet archive discovery and SGF retrieval, and OGS historical-game chat and review links.
 - Added native OGS review discovery, creation, viewing, and authoring, including a visual game tree, variations, setup stones, comments, labels, shapes, territory, and pen drawing. Local exploration stays separate from the presenter, and publishing requires server-granted control. Live analysis respects the server's game restrictions.
 - Moved public playing-profile charts from Game Focus onto Me below the training heatmap, replacing the type radar and separate Profile shortcut. Full training breakdowns remain in Puzzles > Statistics, and profile charts are included in Share stats.
 - Consolidated rank-guided analysis and unranked Career practice into the normal KataGo page. Rank guide supports 20k–9d and the current Career rank, rank-aware overlays and reports, and unrecorded practice with configurable teaching auto-undo.
@@ -54,11 +61,10 @@
 - Expanded voice prompts to English, Chinese, Spanish, Japanese, Korean, and Russian, with two randomized stone-sound pools and migration of older sound selections.
 - Added the Custom Exam option Only new tasks, without repeats, excluding previously solved tasks and using each eligible task once. Requests support up to 10,000 tasks, cap at the available unique pool, and preserve the option in presets.
 - Added 750 Korean Problem Academy problems across four volumes and refreshed collection ordering.
+- Rebuilt debug-only Task Management with separate Tasks, Collections, and Topics controls, custom topic creation/renaming, collection hierarchy editing, bulk task edits, and file or recursive-folder SGF imports. Imports infer ranks from SGF metadata unless overridden; task conversion uses solution markers but discards comment text. Management boards follow Appearance settings.
+- Added reordering of tasks within collections/topics and of the collection/topic catalogs themselves, including the management sidebars and child lists. Published catalog order is used throughout the app; deleting or reordering tasks, topics, and collections never renumbers surviving IDs. These editing tools remain debug-only.
 - Improved compact board layouts, shared review controls, high-frequency redraw performance, rounded notifications, and app-bar color consistency. Organized the in-app FAQ into topic pages and expanded translation coverage across all eight locales.
 - Hardened the KataGo Colab/Modal notebooks with pinned dependencies and verified atomic downloads, a medium-transformer analysis default, current b28/b40 presets, one-container Modal cost controls, direct Quick Tunnel monitor polling, complete remote-query cleanup/error reporting, safe single-session Colab contribution startup, and executable generated-Python validation.
-- Added persistent Google Drive caching to the contribution Colab while keeping KataGo execution local to the runtime and excluding temporary downloads and credentials from the cache.
-
-## 0.2.6+78
 - Added a cumulative estimated HumanSL rank to Game Focus Dashboard Home. Each completed rank-aware analysis contributes a bounded phase-balanced sample of the app user's moves across 20k–9d, and deleting a game immediately removes its evidence from the recalculated estimate.
 - Made Game Focus rank-aware analysis status accurate, including explicit partial/unavailable objective fallbacks, and normalized OGS numeric rankings so unclear SGF ranks can use the discovered account rank.
 - Unified KataGo, Career, and Game Focus opening/midgame/endgame labels with fixed per-board-size move cutoffs, migrated saved Game Focus drill phases without reanalysis, and made the Career/Game Focus AI Top 5 metric a literal top-five match.
@@ -77,6 +83,7 @@
 - Replaced the legacy Joseki assets with an offline generated OGS explorer containing about 20k positions, full-board Fuseki support, official move categories and marks, source/tag filters, descriptions, and bundled or external related-position links.
 - Preserved SGF setup stones, cleared points, player-to-move markers, and compressed setup rectangles across board, record, teaching, task-conversion, and Pattern Search imports.
 - Added five stone-sound options with Random playback and selectable English or Chinese voice prompts.
+- Updated SWHub's Non-Commercial Proprietary License to version 1.1, clarified official distribution and redistribution terms, and expanded the in-app Licences page with notices for bundled engines, networks, icons, themes, and Joseki content.
 - Improved score estimation across study and game boards with correct prisoner accounting, authoritative side-to-move playouts, urgent capture and atari-save handling, rules-appropriate territory/area/stone totals, safer unconditional-life detection, conservative automatic dead-stone decisions, and whole-group manual marking.
 - Report P2P connection failures once instead of dropping or duplicating errors.
 - Refined board-coordinate layout and clipping across board views, widened large-screen Performance Report and Pattern Search statistics dialogs, fixed tsumego solution navigation, kept SRS reviews independent when My Mistakes entries are cleared or ignored, and refreshed the app icon and About-page acknowledgements.
@@ -105,7 +112,7 @@
 - Added automatic stats and leaderboard sync, including sync-key credential handling and safer stats export.
 - Improved leaderboard history, period/category reporting, and merge support for exams and leaderboard attempts.
 - Reworked the desktop KataGo page with a stronger review UI, improved analysis controls, player setup, timers, and SGF save fixes.
-- Kept desktop KataGo out of Android builds while preserving cloud katago on all platforms.
+- Kept desktop KataGo out of Android builds while preserving supported platform behavior.
 - Added SRS graduation counting and fixed SRS, tsumego variation, Ghost Mode, and server scoring issues.
 - Made SGF Management available from Home on all supported platforms and restricted task management to debug/developer mode.
 - Improved local board page to have more sgf editing options, and fixed the visual game tree looks.
@@ -177,6 +184,7 @@
 ## 0.1.14
 - Added P2P Tsumego Battle support with lobby/rematch fixes, timer fixes, presence/resumption improvements, and updated worker configuration.
 - Added the first Pattern Search workflow, including Guess Mode groundwork, crash fixes, and TODO cleanup.
+- Added developer SGF Management tools with Linux support, recursive folder import, loading states, select-all, sortable columns, advanced filters, metadata trimming, SGF check/normalize, duplicate checking, and bulk metadata editing.
 - Added developer Task Management improvements, including recursive SGF folder import, collection filtering, bulk rank/type/tag assignment, default branch status fixes, bulk delete, and automatic SGF rank assignment.
 - Added SRS review for mistakes, with dedicated SRS/mistakes tables, detailed SRS page, ETA/count-up timer, solution navigation, and robust database initialization.
 - Added status and count task types, static-position conversion, sidebar answer highlights, custom rank ranges/topics, and related SRS/attempt tracking fixes.
