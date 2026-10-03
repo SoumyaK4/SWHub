@@ -18,7 +18,6 @@ Google Colab provides access to a **T4 GPU**, usually giving around **3–5 hour
 ### Cons
 
 * Colab may disconnect the runtime if the notebook itself receives no interaction for roughly **10 minutes**.
-* Storage is not persistent, so downloaded files are lost when the runtime is reset.
 * Because of this, you need to run the full setup again whenever you start a fresh session. This usually takes around **7–10 minutes**.
 
 ---
