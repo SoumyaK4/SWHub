@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.2.10
+
+- Choose Career opponent moves and passes from HumanSL probabilities with rank and style adjustments, removing regular-model search weighting. Retain automatic resignation, think time, scoring, and review through regular KataGo, existing engine and notebook setup remains supported.
+- Move Find Puzzle to a Puzzles-only floating button on wide layouts and before Help on compact layouts, retaining identifier and pattern search. Give Favourites a bookmark icon and reorder Star and Management.
+- Release Star modes from the downloadable task DB: 6,465 Breakthrough puzzles and 12,800 Subjects positions, with dedicated authoring tabs. Breakthrough keeps its alternating 60-second puzzles and three-failure runs, adds a highest-level leaderboard, and remains excluded from regular puzzle libraries and totals. Subjects persists sequential rank/puzzle unlocks and attempt counts, with HumanSL replies, three 60-second byo-yomi periods and a 90% win-rate pass check, it has no leaderboard. Debug attempts remain temporary.
+- Protect the new progress schema from older sync clients while preserving existing accounts and keys. Devices using v0.2.9 must upgrade before syncing an account adopted by v0.2.10.
+- Reduce Cloudflare write usage by updating only changed leaderboard history. Allow idle leaderboard, Tsumego Battle, and Teaching Room sockets to hibernate. Replace lobby polling with room-change events and periodic leaderboard refreshes with activity-based updates, so the free server doesn't hit limits.
+- Add an opt-in global Show/hide move navigation bars shortcut (Ctrl+Shift+N), remembering visibility across board, review, puzzle, and study pages while preserving keyboard and board-mouse navigation. Hide the entire KataGo bottom strip with that toggle, including Pass and the engine indicator, and return its height to the board in compact and wide layouts.
+- Show average-rank badges and solved-puzzle percentage rings on collection and section rows, matching the Topics layout and replacing navigation chevrons.
+- Use “Puzzle” consistently in English puzzle labels, settings, counts, messages, and help text.
+- Move Teaching Rooms nickname and identity writes to the shared app settings store, retaining existing saved names and IDs while removing the competing legacy write path.
+- Remove superseded Tsumego Battle reservation cleanup and unused room-code labels while preserving the one-minute empty-room rejoin window.
+- Add a shared Tsumego Battle lobby with named rooms, optional passwords, and remembered nicknames. Remove room-code joining and block new entrants after a battle starts until the host starts a new round.
+- Refresh help in all supported languages for SRS review rules, Joseki downloads and Tenuki, Career practice, Ranked Mode difficulty, collection continuation, and Tsumego Battle readiness.
+- Place leaderboard position/name and rank/total in a compact centered row, center page headings, and remove the ranking-explanation banner.
+- Retire obsolete task-deletion patches and unused My Mistakes code, translations, and dependencies. Preserve catalog-based progress cleanup and older database upgrades, modern stats databases no longer acquire retired SRS columns on relaunch.
+- Add dark app color palettes in Settings > Appearance: Forest Green, Ocean Blue, Violet, Amber, and Rose. Keep the existing green palette as the default, changes apply immediately and persist independently of board and stone themes.
+- Keep custom board images and stone-size controls in an expandable section that starts collapsed when the Custom board theme is selected.
+- Add opt-in Global keyboard shortcuts to open Joseki and Pattern Search from any page. Configure them in Settings > Keyboard shortcuts, Back returns to the previous page.
+- Fix Linux AppImage browser and external-program launches by keeping bundled libraries out of the environment inherited by host programs. Validate relocatable library paths and check packaged startup and browser handoff before GitHub uploads either Linux build.
+- Scan Windows app folders and completed packages with updated Defender definitions before GitHub uploads
+
 ## 0.2.9
 
 - Replace My Mistakes with Favourites and the puzzle Copy SGF action with Save to favourites. Browse saved puzzles by Recent or Rank, favourites persist and sync independently of solves and SRS graduation. Remove the auto-remove-correctly-solved-mistakes setting.

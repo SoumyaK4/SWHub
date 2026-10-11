@@ -48,12 +48,15 @@ SWHub is organized around four destinations: **Puzzles**, **Tools**, **Play**, a
 - **Grading Exam:** solve ten same-rank problems with 45 seconds per problem, eight correct answers pass the exam.
 - **Endgame Exam:** the same ten-problem format using endgame positions.
 - **Time Frenzy:** solve as many increasingly difficult problems as possible in three minutes, with the run ending after three mistakes.
+- **Star → Breakthrough:** alternating Best move and Who is ahead puzzles, 60 seconds each and three failures per run. A separate leaderboard records your highest level, these puzzles stay outside regular puzzle counts and libraries.
+- **Star → Subject:** eight categories with sequential kyu/dan progression, HumanSL opponents and three 60-second byo-yomi periods. Reach at least 90% estimated win rate after 40 moves (both players), or after two passes in Endgame. Release builds save attempts and unlocks, Subjects has no leaderboard. Both modes require the updated task download.
 - **Ranked Mode:** adaptive untimed solving that raises difficulty as accuracy and speed improve.
 - **Collections and Topics:** work through curated books/sets or train a chosen topic, subtopic, and rank range.
-- **Custom Exam:** choose task types, topics, SRS, or favourites with a rank range. **From SRS** includes all registered reviews, even those not due, and records ordinary exam stats without changing SRS schedules or streaks. SRS and favourite pools use each selected puzzle once, capped by the available count. Enable **Unique tasks only** to additionally exclude any task solved correctly at least once. Exams can request up to 10,000 problems.
+- Collection and section rows show average rank and the percentage of distinct puzzles solved correctly, including nested sections.
+- **Custom Exam:** choose puzzle types, topics, SRS, or favourites with a rank range. **From SRS** includes all registered reviews, even those not due, and records ordinary exam stats without changing SRS schedules or streaks. SRS and favourite pools use each selected puzzle once, capped by the available count. Enable **Unique puzzles only** to additionally exclude any puzzle solved correctly at least once. Exams can request up to 10,000 problems.
 - **Favourites and SRS Review:** save puzzles from the puzzle menu and browse or remove them under Favourites, sorted by **Recent** (newest saved first) or **Rank** (easier to harder). Saved puzzles persist locally and sync with your stats, solving or graduating them from SRS does not remove them. SRS schedules missed problems for review and graduates them after five consecutive correct SRS reviews.
-- **Statistics and Leaderboards:** review recent activity, rank/type breakdowns, personal bests, and rank-first global results across rolling training periods. Time Frenzy uses your best single run, exams count only passed exams toward rank. Equal rank-and-score results share a place.
-- **Find Task:** open a task directly from its shared identifier. Management tools remain developer/debug features.
+- **Statistics and Leaderboards:** review recent activity, rank/type breakdowns, personal bests, and global results across rolling training periods. Breakthrough uses highest level, other modes use rank first. Time Frenzy uses your best single run, exams count only passed exams toward rank. Equal rank-and-score results share a place.
+- **Find Puzzle:** search by shared identifier or board pattern. The search button appears only on Puzzles: at the bottom right on wide layouts and before Help on compact layouts. Favourites uses a bookmark icon. Management tools remain developer/debug features.
 
 Puzzle solving also supports multiple correct variations, up to two additional correct-variation prompts after the initial solve, optional solution continuation, color/orientation randomization, always-black-to-play, Auto-Next, Count and Status problem types, Count Hard Mode, and Ghost Mode for visualization training.
 
@@ -75,11 +78,11 @@ Wide puzzle sidebars can be resized by dragging their divider and remember the c
 <details>
 <summary>What can I do in Play?</summary>
 
-- **Career Mode:** play ranked games against rank-guided KataGo HumanSL styles, track recent-window promotion/demotion progress and peak rank, save finished SGFs, and review games. Unranked guided practice is now part of the normal KataGo page.
+- **Career Mode:** play ranked games against rank-guided KataGo HumanSL styles, track recent-window promotion/demotion progress and peak rank, save finished SGFs, and review games. Opponent moves and passes are sampled from HumanSL probabilities with rank and style adjustments, rather than always choosing the most likely move. Regular KataGo still handles automatic resignation, think time, scoring, and review, both models remain configured. Unranked guided practice is now part of the normal KataGo page.
 - **OGS, KGS, and IGS(Pandanet):** sign in and play through native clients inside SWHub. Browse players and live games, send or answer challenges, resume ongoing games where supported, chat, and open game records. Record actions include Review in SWHub, Open in KataGo, and Download SGF. Each server retains its own rules and available controls.
 - **OGS Reviews:** discover, create, and open shared reviews with a visual game tree, comments, setup stones, variations, marks, territory, and pen drawing. Follow the presenter or explore locally.
 - **Variant Server:** play on [variant.baduk.club](https://variant.baduk.club/). Combine the server's variants, design rectangular boards with missing intersections, use Circloid and Joseki cards, join multiplayer or Rengo seats, spectate, review, and score games. Local review keeps the original history alongside editable variations and score estimates, special variants use manual position editing. Your guest identity is saved on this device, browser identities are separate.
-- **Tsumego Battles:** create or join a room code, configure rank/type/time ranges, chat and ready up, then solve the same synchronized problem set.
+- **Tsumego Battles:** browse a shared lobby, create named rooms with optional passwords, configure rank/type/time ranges, chat and ready up, then solve the same synchronized problem set. New players cannot enter after a battle starts. The lobby updates when rooms change and pauses its subscription while hidden or inactive.
 - **Teaching Rooms:** when enabled for a build, create password-protected shared boards with teacher/student roles, assigned colors and turns, chat, board annotations, scoring, and controlled voice participation.
 </details>
 
@@ -95,12 +98,15 @@ Wide puzzle sidebars can be resized by dragging their divider and remember the c
 <details>
 <summary>What appearance and controls can I customize?</summary>
 
+- Dark app palettes under **Settings > Appearance**: Forest Green (the default), Ocean Blue, Violet, Amber, and Rose. Changes apply immediately and are remembered. Responsive layouts support smaller windows and larger text, with a compact native GTK title bar on Linux. Desktop-managed title bars keep their system sizing.
 - Board and stone themes, including separate custom board, black-stone, and white-stone images under **Settings > Appearance**.
 - Inside, outside, or hidden coordinates across boards, independent fuzzy placement and stone animation toggles, separate custom black/white stone sizes, shadows, hover stones, custom cursors, and move numbers.
 - Separate stone, interface, and voice volumes, two randomized stone-sound pools, and English, Chinese, Spanish, Japanese, Korean, or Russian voice prompts.
 - Desktop keyboard bindings under **Settings > Keyboard shortcuts**. Search by action, page, or key, or show only enabled actions. Press **F1** to search all shortcuts and edit or enable/disable them directly, including while typing. F1 search starts enabled, other actions start disabled with suggested keys visible. Each action has one binding: click its key field to replace it. Changes apply immediately, recording can be cancelled, and conflicts between actions that share a page are blocked.
-- Keyboard shortcuts use six groups: Global, Board & game tree, Online play, KataGo, Puzzle solving, and Study tools. Each action shows where it works. Shared navigation, coordinates, and move numbers expose page-specific overrides, Joseki navigation is included under Board. Global includes dialog submit/dismiss, and Puzzle solving includes Try custom moves after solving. All bindings except F1 shortcut search start off. Main-page, Settings-page and numbered Server workspace bindings have been removed.
+- Keyboard shortcuts use six groups: Global, Board & game tree, Online play, KataGo, Puzzle solving, and Study tools. Each action shows where it works. Shared navigation, coordinates, and move numbers expose page-specific overrides, Joseki navigation is included under Board. Global includes Open Joseki, Open Pattern Search, and dialog submit/dismiss, and Puzzle solving includes Try custom moves after solving. Enable either global study-tool action to open it from another page, Back returns to that page. All bindings except F1 shortcut search start off. Main-page, Settings-page and numbered Server workspace bindings have been removed.
 - Mouse gestures are always available independently of keyboard bindings. See **Settings > FAQ > Visuals & Controls** for the mouse reference, including Alt+left-click stone history, wheel navigation, previews, editing, scoring, and panel resizing.
+- Enable **Global > Show/hide move navigation bars** (suggested **Ctrl+Shift+N**) to hide or restore move controls throughout the app. The choice is remembered, enabled navigation keys and board mouse gestures keep working while the bars are hidden.
+- In KataGo, this hides the entire bottom strip, including Pass and the engine indicator, giving the freed height to the board.
 </details>
 
 ## F.A.Q.
@@ -152,7 +158,7 @@ Catalog updates preserve progress for surviving task IDs when their metadata cha
 
 ### Do I need a new account or sync key for the stats upgrade?
 
-No. Version 0.2.8 uses compressed v2 stats sync with your existing username and sync key. Existing cloud statistics, including inactive accounts, have been migrated. Legacy-only apps must upgrade. Version 0.2.7 can still sync accounts using unversioned task data, but once any device upgrades the account to a dated task catalog, all other devices must update their app and task data before syncing again. Their offline progress remains local until they upgrade. SRS restore preserves newer local review progress when the cloud schedule has not changed, if both devices changed a schedule, the earlier review takes priority. Training statistics remain separate from Game Focus storage.
+No. Version 0.2.8 uses compressed v2 stats sync with your existing username and sync key. Existing cloud statistics, including inactive accounts, have been migrated. Legacy-only apps must upgrade. Version 0.2.7 can still sync accounts using unversioned task data, but once any device upgrades the account to a dated task catalog, all other devices must update their app and task data before syncing again. Their offline progress remains local until they upgrade. SRS restore preserves newer local review progress when the cloud schedule has not changed, if both devices changed a schedule, the earlier review takes priority. After v0.2.10 saves the new stats schema, older devices must also upgrade the app before restoring or uploading that account, this prevents loss of Subjects/Breakthrough records. Training statistics remain separate from Game Focus storage.
 
 ### Where did my older Game Focus games go?
 
