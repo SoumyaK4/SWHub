@@ -1,12 +1,30 @@
 # Changelog
 
+## 0.2.11
+
+- Existing Career progress resets to 18K once for the revised rules, later updates preserve the new progress. Ordinary training statistics and linked sync accounts are unaffected.
+- One production build set now includes FoxWQ and Teaching Rooms. Teaching Rooms requires a local access password, remembered after successful entry, and its server is not contacted before access is granted.
+- Add Statistics backup in Android Settings to export and restore a standalone stats database, including the linked username and sync key. Validate backups before replacing local progress.
+- Make related puzzle, SRS, counter and collection writes atomic. Roll back failed schema upgrades, preserve unreadable databases, and include committed WAL data when importing legacy filenames.
+- Establish v0.2.11 database compatibility tests and cover offline backup, restore and failed sync. Continue using the same `swhub_stats.db` across future releases, with automatic, data-preserving schema additions when needed.
+- Show selectable Markdown release notes before updating, with Update, Later and a release-page link for manual downloads. Keep cancellation and visible download progress, format post-update notes the same way.
+- Match Career's 18K–9D promotion and demotion thresholds to Fox's published table, including double-rank changes. Pick opponent styles randomly per game without requiring every style before promotion.
+- Start Career opponents two HumanSL ranks below the displayed rank, retaining results-based adjustment. Subjects keeps its fixed three-rank offset and rank-adjusted sampling without rotating styles. (For Now)
+- Require valid HumanSL move probabilities for Career and Subjects, filter illegal moves and avoid regular-model move fallback. Keep regular KataGo for resignation, scoring and review. Hide routine engine status chatter during Career play.
+- Show KataGo win rate and estimated score after Subject passes, failures and timeouts. Allow evaluation retries without recording another attempt.
+- Reuse available HumanSL comparisons in Performance Report and fetch only missing data for a full rank estimate. Remove redundant symmetry requests and reduce repeated result processing and UI updates, no notebook changes or persistent cache are required.
+- Use SGF player names in KataGo and Performance Report, falling back to Human when absent. Simplify rank/style controls, remove the Career-rank shortcut, arrange rank options in two columns, and wrap report tabs on narrow screens.
+- Restore Analyze and Estimate controls in OGS, KGS and Pandanet historical game viewers. Add Estimate to OGS shared reviews and use the label Estimate consistently.
+- Reduce stalls when opening OGS reviews and show complete time controls in the OGS custom-match list.
+
 ## 0.2.10
 
 - Choose Career opponent moves and passes from HumanSL probabilities with rank and style adjustments, removing regular-model search weighting. Retain automatic resignation, think time, scoring, and review through regular KataGo, existing engine and notebook setup remains supported.
 - Move Find Puzzle to a Puzzles-only floating button on wide layouts and before Help on compact layouts, retaining identifier and pattern search. Give Favourites a bookmark icon and reorder Star and Management.
-- Release Star modes from the downloadable task DB: 6,465 Breakthrough puzzles and 12,800 Subjects positions, with dedicated authoring tabs. Breakthrough keeps its alternating 60-second puzzles and three-failure runs, adds a highest-level leaderboard, and remains excluded from regular puzzle libraries and totals. Subjects persists sequential rank/puzzle unlocks and attempt counts, with HumanSL replies, three 60-second byo-yomi periods and a 90% win-rate pass check, it has no leaderboard. Debug attempts remain temporary.
+- Release Star modes from the downloadable task DB: 18,354 Breakthrough puzzles, balanced at 9,177 per type, and 12,800 Subjects positions, with dedicated authoring tabs. Breakthrough keeps its alternating 60-second puzzles and three-failure runs, adds a highest-level leaderboard, and remains excluded from regular puzzle libraries and totals. Subjects persists sequential rank/puzzle unlocks and attempt counts, with HumanSL replies, three 60-second byo-yomi periods and a 90% win-rate pass check, it has no leaderboard.
 - Protect the new progress schema from older sync clients while preserving existing accounts and keys. Devices using v0.2.9 must upgrade before syncing an account adopted by v0.2.10.
-- Reduce Cloudflare write usage by updating only changed leaderboard history. Allow idle leaderboard, Tsumego Battle, and Teaching Room sockets to hibernate. Replace lobby polling with room-change events and periodic leaderboard refreshes with activity-based updates, so the free server doesn't hit limits.
+- Reduce Cloudflare write usage by updating only changed leaderboard history. Allow idle leaderboard, Tsumego Battle, and Teaching Room sockets to hibernate. Replace lobby polling with room-change events and periodic leaderboard refreshes with activity-based updates, hopefully no more sync issues.
+
 - Add an opt-in global Show/hide move navigation bars shortcut (Ctrl+Shift+N), remembering visibility across board, review, puzzle, and study pages while preserving keyboard and board-mouse navigation. Hide the entire KataGo bottom strip with that toggle, including Pass and the engine indicator, and return its height to the board in compact and wide layouts.
 - Show average-rank badges and solved-puzzle percentage rings on collection and section rows, matching the Topics layout and replacing navigation chevrons.
 - Use “Puzzle” consistently in English puzzle labels, settings, counts, messages, and help text.
@@ -20,7 +38,8 @@
 - Keep custom board images and stone-size controls in an expandable section that starts collapsed when the Custom board theme is selected.
 - Add opt-in Global keyboard shortcuts to open Joseki and Pattern Search from any page. Configure them in Settings > Keyboard shortcuts, Back returns to the previous page.
 - Fix Linux AppImage browser and external-program launches by keeping bundled libraries out of the environment inherited by host programs. Validate relocatable library paths and check packaged startup and browser handoff before GitHub uploads either Linux build.
-- Scan Windows app folders and completed packages with updated Defender definitions before GitHub uploads
+- Strengthen release checks for Flutter runtime files, assets, and all three Android APK architectures. Prevent an unused desktop Java dependency and correct macOS framework asset validation and disabled-updater cleanup.
+- Scan Windows app folders and completed packages with updated Defender definitions before GitHub uploads, retaining hashes and diagnostic logs when a scan fails. Check the completed portable archive's integrity before scanning.
 
 ## 0.2.9
 
