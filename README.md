@@ -66,8 +66,8 @@
 
 | Use | Setup |
 | --- | --- |
-| Play and analysis | [Colab notebook](doc/kata/Kata_Colab.ipynb) · [Modal notebook](doc/kata/Kata_Modal.ipynb) |
-| Training contribution | [Colab guide](doc/kata/KataGo_Colab_Contribution.md) · [Modal guide](doc/kata/KataGo_Modal_Contribution.md) |
+| Play and analysis | [Colab notebook](Docs/Free%20Cloud%20Katago/Analysis/Kata_Colab.ipynb) · [Modal notebook](Docs/Free%20Cloud%20Katago/Analysis/Kata_Modal.ipynb) |
+| Training contribution | [Colab guide](Docs/Free%20Cloud%20Katago/Contribute/Kata_Colab_Contribution.ipynb) · [Modal guide](Docs/Free%20Cloud%20Katago/Contribute/Kata_Modal_Contribution.ipynb) |
 
 Career and Subjects need both regular KataGo and HumanSL configured. Opponent moves come from HumanSL, regular KataGo supplies evaluations and related features. And these notebooks are pre-configured so you won't have to figure things out.
 
