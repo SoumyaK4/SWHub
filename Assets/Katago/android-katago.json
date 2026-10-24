@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "engines": [
+    {
+      "id": "katago-1.18.2-arm64-v8a-opencl-v1",
+      "bridge": 1,
+      "abi": "arm64-v8a",
+      "minSdk": 26,
+      "backend": "opencl",
+      "file": {
+        "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-arm64-v8a-opencl-v1.so",
+        "bytes": 9283440,
+        "sha256": "882e6180cad268a5e240eb4fc9d180357d45a0d43337460962db84077cfc65a3"
+      },
+      "source": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-source-v1.tar.gz"
+    }
+  ]
+}

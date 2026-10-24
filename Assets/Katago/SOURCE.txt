@@ -1,0 +1,4 @@
+KataGo source: https://github.com/lightvector/KataGo/tree/fd0723fdbc0e9d82cf269c9630af8c27c57c07c4
+Android wrapper and build changes: tool/katago_android/ and android/katago/ in SWHub
+OpenCL headers: https://github.com/KhronosGroup/OpenCL-Headers/tree/8a97ebc88daa3495d6f57ec10bb515224400186f
+The build-only OpenCL stub must not be distributed. Models have separate licenses.
