@@ -2,3 +2,7 @@ KataGo source: https://github.com/lightvector/KataGo/tree/fd0723fdbc0e9d82cf269c
 Android wrapper and build changes: tool/katago_android/ and android/katago/ in SWHub
 OpenCL headers: https://github.com/KhronosGroup/OpenCL-Headers/tree/8a97ebc88daa3495d6f57ec10bb515224400186f
 The build-only OpenCL stub must not be distributed. Models have separate licenses.
+
+CPU Eigen source: https://gitlab.com/libeigen/eigen/-/tree/3.4.0
+CPU v2 source bundle: katago-1.18.2-android-source-v2.tar.gz
+GPU v1 source bundle remains katago-1.18.2-android-source-v1.tar.gz

@@ -13,6 +13,19 @@
         "sha256": "882e6180cad268a5e240eb4fc9d180357d45a0d43337460962db84077cfc65a3"
       },
       "source": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-source-v1.tar.gz"
+    },
+    {
+      "id": "katago-1.18.2-arm64-v8a-cpu-v2",
+      "bridge": 1,
+      "abi": "arm64-v8a",
+      "minSdk": 26,
+      "backend": "cpu",
+      "file": {
+        "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-arm64-v8a-cpu-v2.so",
+        "bytes": 8647912,
+        "sha256": "1b341a8e400c9a16c5782b190e989ccd8b279d7c67957f28a19e57ebf9cabd5e"
+      },
+      "source": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-source-v2.tar.gz"
     }
   ]
 }
