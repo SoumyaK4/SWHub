@@ -1,10 +1,10 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 12 Oct 2026, Katago v1.18.2```
+```Last updated: 30 Oct 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 
-The latest version tested on [SWHub](https://github.com/SoumyaK4/WeiqiHub), but should work fine in Katrain or similar apps that supports Cloud KataGo.
+The latest version tested on [SWHub](https://github.com/SoumyaK4/SWHub), but should work fine in Katrain or similar apps that supports Cloud KataGo.
 
 ## 1. Google Colab
 
@@ -34,7 +34,7 @@ Modal provides **$30 of free credits every month**.
 * You can set your usage limit to **$29** in Modal's settings so your card won't be charged if you reach the free-credit limit.
 * The free credits reset at the beginning of every month.
 
-### Con
+### Cons
 
 * To receive the **$30/month free credits**, you need to link a card during the initial setup.
 * Modal may make a small **one-time verification charge of around $0.50** to confirm the card.
@@ -56,6 +56,8 @@ Most importantly, you won't have to repeat the full KataGo setup every time you 
 ---
 
 # Download & Setup
+
+## Video Demo
 
 Download the Google Colab or Modal Jupyter Notebook here:
 

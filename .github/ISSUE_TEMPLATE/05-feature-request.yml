@@ -1,5 +1,5 @@
 name: "✨ Feature request"
-description: "Suggest an improvement or new capability for SWHub / WeiqiHub"
+description: "Suggest an improvement or new capability for SWHub"
 title: "[Feature] "
 body:
   - type: dropdown
