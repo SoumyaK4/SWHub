@@ -28,9 +28,12 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 
 ## A look inside
 
-## Video
-
-## Screenshots
+<!-- <p align="center">
+  <a href="https://www.youtube.com/watch?v=VIDEO_ID">
+    <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg" alt="Watch the SWHub setup guide on YouTube" width="640">
+  </a><br>
+  <sub>Watch the features overview on YouTube.</sub>
+</p> -->
 
 <table width="100%">
   <tr>
@@ -80,27 +83,27 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 
 On Linux, unlock your desktop keyring before opening SWHub. Saved server passwords use device secure storage and are not included in app backups.
 
-## Cloud KataGo
+## Free Cloud KataGo
 
-Run KataGo remotely with the Colab or Modal notebooks, then connect SWHub to the engine.
+Run KataGo remotely with Colab or Modal for free, then connect SWHub to the engine.
 
-| What you want to do | Google Colab | Modal |
-| --- | --- | --- |
-| **Play and analyse** | [Open notebook](./Docs/Free%20Cloud%20Katago/Analysis/Kata_Colab.ipynb) | [Open notebook](./Docs/Free%20Cloud%20Katago/Analysis/Kata_Modal.ipynb) |
-| **Contribute to KataGo training** | [Open notebook](./Docs/Free%20Cloud%20Katago/Contribute/Kata_Colab_Contribution.ipynb) | [Open notebook](./Docs/Free%20Cloud%20Katago/Contribute/Kata_Modal_Contribution.ipynb) |
+| What you want to do | Guide |
+| --- | --- |
+| **Play and analyse** | [Open](./Docs/Free%20Cloud%20Katago/Analysis/) |
+| **Contribute to KataGo training** | [Open](./Docs/Free%20Cloud%20Katago/Contribute/) |
 
 For Career and Subjects, HumanSL chooses opponent moves while regular KataGo supplies evaluations and related features. Cloud providers apply their own availability and usage limits.
 
 ## F.A.Q.
 
-More detailed guides and controls are available in **Settings → FAQ** inside the app.
+More detailed guides and controls are available in **Settings → FAQ** inside SWHub.
 
 <details>
 <summary><strong>What works offline?</strong></summary>
 
 Downloaded puzzles and Joseki, Local Board, Pattern Search libraries, local statistics, saved SGFs and completed Game Focus reviews. Local KataGo also works offline after setup.
 
-Subjects and Career needs a running KataGo engine. Using a remote engine requires internet, as do online play, cloud analysis, profile imports and sync.
+Subjects and Career need a running engine. Using a remote engine requires internet, as do online play, cloud analysis, profile imports and sync.
 
 </details>
 
@@ -145,13 +148,13 @@ Subjects results and pass rates appear in **Statistics → Charts** under **Subj
 </details>
 
 <details>
-<summary><strong>FoxWQ?</strong></summary>
+<summary><strong>How do I use FoxWQ?</strong></summary>
 
 Open **Play → FoxWQ** and sign in with your Fox account. The bundled client connects directly. Browse players and broadcasts, play, chat, and review or download game records.
 
 Controls follow the app language, while player messages keep their original text. Small screens use bottom navigation and an overflow menu in the lobby, with the bar hidden inside rooms. Wide screens use a feature rail. See **Settings → FAQ → Play Page → FoxWQ** for detailed guidance.
 
-If a connection fails during a game, Fox tries to reconnect up to four times while keeping the last confirmed board visible. If recovery fails, you return to Play.
+If a connection fails during a game, Fox tries to reconnect up to four times while keeping the last confirmed board visible. If recovery fails, you return to Play. Pending actions are never automatically resent.
 
 This is an unofficial FoxWQ Client. Server compatibility and account safety cannot be guaranteed. Consider using a spare account.
 

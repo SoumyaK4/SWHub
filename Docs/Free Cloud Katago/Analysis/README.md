@@ -1,6 +1,6 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 30 Oct 2026, Katago v1.18.2```
+```Last updated: 1 Nov 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 
@@ -55,16 +55,19 @@ Most importantly, you won't have to repeat the full KataGo setup every time you 
 
 ---
 
-# Download & Setup
+# Setup
 
-## Video Demo
-
-Download the Google Colab or Modal Jupyter Notebook here:
-
-**[Google Colab Jupyter Notebook](./Kata_Colab.ipynb)**
-
-**[Modal Jupyter Notebook](./Kata_Modal.ipynb)**
-
-Download the notebook for the service you want to use, then upload it to the respective platform.
+| Google Colab | Modal |
+| --- | --- |
+| [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Analysis/Kata_Colab.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Analysis/Kata_Modal.ipynb) |
 
 The **platform-specific setup instructions are included inside each notebook**.
+
+# Issues
+
+If you run into any issues, then you can contact me -> 
+
+
+<a href="https://discord.gg/ptjzTWU9SP"><img alt="Discord chat: members online" src="https://img.shields.io/discord/1369452545730285698?label=SWHub&amp;logo=discord&amp;logoColor=white&amp;color=35664a"></a> 
+
+**[Computer Go Community](https://discord.gg/5aTGusWxvc)**

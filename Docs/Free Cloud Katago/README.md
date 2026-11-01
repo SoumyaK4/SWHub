@@ -1,10 +1,10 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 30 Oct 2026, Katago v1.18.2```
+```Last updated: 1 Nov 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 
-The latest version tested on [SWHub](https://github.com/SoumyaK4/SWHub), but should work fine in Katrain or similar apps that supports Cloud KataGo.
+The latest version tested on [SWHub](https://github.com/SoumyaK4/SWHub), but should work fine in Katrain or similar apps that supports JSON based Cloud KataGo.
 
 ## 1. Google Colab
 
@@ -55,20 +55,18 @@ Most importantly, you won't have to repeat the full KataGo setup every time you 
 
 ---
 
-# Download & Setup
+# Setup
 
-## Video Demo
+| What you want to do | Google Colab | Modal |
+| --- | --- | --- |
+| **Play and analyse** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Analysis/Kata_Colab.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Analysis/Kata_Modal.ipynb) |
+| **Contribute to KataGo training** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Contribute/Kata_Colab_Contribution.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Contribute/Kata_Modal_Contribution.ipynb) | 
 
-## For Analysis
+# Issues
 
-Download the Google Colab or Modal Jupyter Notebook here:
+If you run into any issues, then you can contact me -> 
 
-**[Google Colab & Modal Jupyter Notebooks](https://github.com/SoumyaK4/WeiqiHub/tree/SWHub/Docs/Free%20Cloud%20Katago/Analysis)**
 
-Download the notebook for the service you want to use, then upload it to the respective platform.
+<a href="https://discord.gg/ptjzTWU9SP"><img alt="Discord chat: members online" src="https://img.shields.io/discord/1369452545730285698?label=SWHub&amp;logo=discord&amp;logoColor=white&amp;color=35664a"></a> 
 
-The **platform-specific setup instructions are included inside each notebook**.
-
-## For Contribution
-
-**[Google Colab & Modal Jupyter Notebooks](https://github.com/SoumyaK4/SWHub/blob/SWHub/Docs/Free%20Cloud%20Katago/Contribute)**
+**[Computer Go Community](https://discord.gg/5aTGusWxvc)**
