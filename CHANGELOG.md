@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.2.13
+
+- Preserve verified metadata repairs during Pattern Management's name/rank normalization and uncertain-name marking. Keep manual edits available and retain verification through reindexing and database export.
+- Require four consecutive agreeing earlier professional ranks before Rank normalise raises a later lower rank. Preserve promotions, reject same-day or undated correction evidence, and prevent proposed corrections from supporting further changes in the same preview.
+- Add F2 as a global desktop shortcut to open Settings. It starts enabled and can be remapped or disabled in Keyboard shortcuts.
+- Separate task-data publication from the leaderboard and statistics-sync Worker, matching the standalone Joseki host. Prepare compatibility redirects and preserve installed catalogs, with deployment deferred.
+- Speed up offline Joseki position reads with a local SQLite dictionary. Existing downloads convert automatically and preserve their original data. Remove the redundant "Compiled from OGS" heading from the empty board.
+- Add control panels to all four cloud KataGo notebooks, with model choices, workspace selection, start/deploy and stop buttons, progress, logs and a connection address to copy. Setup shows the current stage, elapsed time and three recent log lines, including time since the last log during quiet steps. Remove the optional Colab heartbeat. Run only the top Open control panel block. All code blocks default to collapsed, and each notebook remains standalone.
+- Show Fox's daily fast-match allowance refusal instead of a generic matchmaking error, with localized feedback after the search dialog closes.
+- Match Variant Server’s repeated large-board column labels and trim unused outer water while keeping the full board editor. Show water around custom-board islands, base phone warnings on the visible board, and default new games to 19 × 19 with 5 minutes plus 20 seconds per move.
+- Match current OGS undo eligibility: require a played move of your own, include passes and free-handicap placements, avoid duplicate pending requests and hide undo in Rengo.
+- Keep paused OGS clocks at their remaining time when the pause began, including overtime, instead of restoring the time from the previous move.
+- Bring the experimental Tygem integration from debug to release version.
+- Restore interrupted Fox games from fresh player state even when the profile service is delayed. Show separate Gold, Platinum and Growth membership dates and subscription cadence in profiles.
+- Support optional device-tested Qualcomm NPU engine packages for Android local KataGo, with separate analysis models and verified runtime files. Keep full-precision HumanSL, fixed batch limits and responsive cancellation while installed files are checked. Existing CPU/OpenCL downloads and model defaults remain available.
+- Show Variant Server mixes directly in creation, with incompatible choices disabled. Add custom-board painting, fill tools, autosaved drafts and previews, configurable Katachi mouse/keyboard controls, five last-move markers, Magnetic slide animation and live lobby updates. Preserve mixed settings when remaking games and support zero-overtime clocks.
+- Fix Variant Server failing to connect with `invalid_session`. Restore saved guest sessions and retain refreshed credentials after changing the display name.
+- Update Variant Server for compact lobby summaries, incremental room updates and separately loaded review history. Add Katachi card controls, Magnetic, custom boards up to 52 × 52 and six board presets. Preserve layouts when resizing, keep card hands private and pause reconnect controls until a valid snapshot for the current room arrives.
+- Prepare automatic updates for the January 2027 switch to date-based versions such as 2027.01.01, while continuing to support current-format releases.
+- Make v0.2.13 the migration checkpoint for later releases. Install and open it before upgrading from an older version to a later release, and let saved-data preparation finish.
+- Finish saved-data upgrades at startup, including unopened Game Focus profiles, Teaching identities, Fox accounts and collection signatures before the first puzzle download. Preserve every profile's identifiers, saved reviews, drills, resume state and current account selection. Show preparation progress and offer retry after a failed upgrade, without connecting to servers or starting KataGo.
+- Upgrade old installed statistics, including versioned filenames, committed WAL data, SRS schedules and exam history, in the one-time startup migration. Preserve original recovery files and older backup restores. Later launches use the normalized installed format.
+- Preserve Teaching room passwords, participant identities and permissions across server restarts. Save room creation atomically so failed saves can retry without leaving partial rooms.
+- Save previously implicit animation, sound, Android KataGo, KataGo panel and shortcut preferences once before use, preserving disabled choices, existing settings and current Career progress. Remove feature-entry migration dependencies and repeated old-task-cache deletion.
+
 ## 0.2.12
 
 - Improve localisation.

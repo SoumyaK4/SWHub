@@ -1,6 +1,6 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 1 Nov 2026, Katago v1.18.2```
+```Last updated: 8 Nov 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 
@@ -56,6 +56,8 @@ Most importantly, you won't have to repeat the full KataGo setup every time you 
 ---
 
 # Setup
+
+I've improved it enough so you don't have to look at bunch of code anymore haha. after running the first cell you get a GUI.
 
 | What you want to do | Google Colab | Modal |
 | --- | --- | --- |

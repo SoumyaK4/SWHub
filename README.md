@@ -19,8 +19,8 @@
 
 <p align="center">
   <a href="#get-started">Get started</a> ·
-  <a href="#cloud-katago">Free Cloud KataGo</a> ·
-  <a href="#quick-answers">FAQ</a> ·
+  <a href="#free-cloud-katago">Free Cloud KataGo</a> ·
+  <a href="#faq">FAQ</a> ·
   <a href="CHANGELOG.md">Changelog</a>
 </p>
 
@@ -60,7 +60,7 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 | --- | --- |
 | **Puzzles** | Practise collections and topics, take exams, revisit mistakes with spaced repetition, save favourites, or try Breakthrough and Subjects. |
 | **Tools** | Analyse with KataGo, review games and practise drills in Game Focus, explore Joseki, search Game Patterns, or study on a local board. |
-| **Play** | Climb Career Mode, connect to OGS, KGS, Pandanet or FoxWQ, explore Variant Server, race through Tsumego Battles, or share a Teaching Room. |
+| **Play** | Climb Career Mode, connect to OGS, KGS, Pandanet, FoxWQ or Tygem, explore Variant Server, race through Tsumego Battles, or share a Teaching Room. |
 | **Me** | Follow your progress, activity and personal bests, link playing profiles, and optionally sync training statistics. |
 
 ## A few highlights
@@ -76,16 +76,16 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 
 1. **[Download SWHub](https://github.com/SoumyaK4/SWHub/releases/latest)** for Windows, Linux, macOS or Android.
 2. **Choose a starting point.** Open Puzzles for reading practice, Tools for study, or Play for games. Puzzles and Joseki offer their data downloads when first opened. Installed data works offline, puzzle-data updates take effect after restarting SWHub.
-3. **Set up KataGo when you need it.** Use desktop Auto Setup or connect a remote engine for analysis. Career and Subjects need both regular KataGo and HumanSL. The [cloud notebooks below](#cloud-katago) offer another way to get started.
-4. **Find help inside the app.** Open **Settings → FAQ** or the **?** button for detailed feature guides. On desktop, **F1** opens shortcut search. Other app shortcuts are opt-in.
+3. **Set up KataGo when you need it.** Use desktop Auto Setup or connect a remote engine for analysis. Career and Subjects need both regular KataGo and HumanSL. The [cloud notebooks below](#free-cloud-katago) offer another way to get started.
+4. **Find help inside the app.** Open **Settings → FAQ** or the **?** button for detailed feature guides. On desktop, **F1** opens shortcut search and **F2** opens Settings. Other app shortcuts are opt-in.
 
-> **Android local KataGo is experimental.** Open **Settings → Local KataGo** to download and test it, then enable it. Local engine choices stay hidden until enabled. It compares downloaded CPU and compatible OpenCL GPU engines, with separate model downloads. Remote engine is always available.
+> **Android local KataGo is experimental.** Open **Settings → Local KataGo** to download and test it, then enable it. Local engine choices stay hidden until enabled. It compares compatible downloaded engines, with separate model downloads. Available backends depend on your phone and the published downloads. Remote engine is always available.
 
 On Linux, unlock your desktop keyring before opening SWHub. Saved server passwords use device secure storage and are not included in app backups.
 
 ## Free Cloud KataGo
 
-Run KataGo remotely with Colab or Modal for free, then connect SWHub to the engine.
+Run KataGo remotely with Colab or Modal, then connect SWHub to the engine. Run the top notebook block to open buttons and settings fields for setup without editing code.
 
 | What you want to do | Guide |
 | --- | --- |
@@ -134,6 +134,8 @@ Keep your existing username and key always securely saved somewhere because its 
 
 **App settings and Career progress** cannot be backed up.
 
+v0.2.13 prepares older saved data for later releases, including features you have not opened. Install and open v0.2.13 before upgrading from an older version to a later release, and keep it open until preparation finishes. Existing statistics backup files remain supported.
+
 </details>
 
 <details>
@@ -176,7 +178,7 @@ Keep SWHub up to date on every participant's device for compatible results, shar
 <details>
 <summary><strong>Where are the controls, and how do updates work?</strong></summary>
 
-Use **Settings → FAQ** for feature guides and mouse gestures, and **Settings → Keyboard shortcuts** for bindings. **F1** opens shortcut search on desktop. Mouse-wheel navigations work independently of enabled keyboard bindings where supported.
+Use **Settings → FAQ** for feature guides and mouse gestures, and **Settings → Keyboard shortcuts** for bindings. **F1** opens shortcut search and **F2** opens Settings on desktop. Mouse-wheel navigations work independently of enabled keyboard bindings where supported.
 
 SWHub checks for updates on every app launch. You can read release notes before downloading or use the [releases page](https://github.com/SoumyaK4/SWHub/releases) to update manually. Installation uses your platform's normal confirmation or replacement flow.
 
