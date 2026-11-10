@@ -26,87 +26,18 @@
         "sha256": "1b341a8e400c9a16c5782b190e989ccd8b279d7c67957f28a19e57ebf9cabd5e"
       },
       "source": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/katago-1.18.2-android-source-v2.tar.gz"
-    },
-    {
-      "id": "katago-1.18.2-arm64-qnn-v1-human-opencl-sm7550",
-      "abi": "arm64-v8a",
-      "minSdk": 31,
-      "bridge": 1,
-      "backend": "qnn",
-      "socModels": [
-        "SM7550"
-      ],
-      "file": {
-        "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-loader-719eed77db5b.so",
-        "bytes": 329512,
-        "sha256": "719eed77db5b9c1ed5618b85d83a60a39afa1801c28253221f4d1ac8e24ab58e"
-      },
-      "dependencies": [
-        {
-          "name": "katago-core.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-katago-core-5acf38251d0f.so",
-            "bytes": 10441752,
-            "sha256": "5acf38251d0f07026808aa08fbeb840c1002daa0913735ef732cf8cee322943b"
-          }
-        },
-        {
-          "name": "libonnxruntime.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libonnxruntime-f1caf5448b86.so",
-            "bytes": 23990744,
-            "sha256": "f1caf5448b86fb5ab6584f26c219786dc3c807d20b2bc02667782c2dd3c7a32c"
-          }
-        },
-        {
-          "name": "libQnnSystem.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libQnnSystem-dcdef54ab054.so",
-            "bytes": 2689368,
-            "sha256": "dcdef54ab054072c5713974feada8af8c56558da184b7d9228e2e116aa3c7016"
-          }
-        },
-        {
-          "name": "libQnnHtpV73Stub.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libQnnHtpV73Stub-e91d29f2d6d8.so",
-            "bytes": 638216,
-            "sha256": "e91d29f2d6d8077652ba2902c5670dc9045d3caee413662e2d41529dfa93317b"
-          }
-        },
-        {
-          "name": "libQnnHtpV73Skel.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libQnnHtpV73Skel-5799de9978cc.so",
-            "bytes": 16316880,
-            "sha256": "5799de9978ccaefd6e560b0aab94cae3e6a93450694df8b21f4ec711e99755cc"
-          }
-        },
-        {
-          "name": "libQnnHtpPrepare.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libQnnHtpPrepare-6db1ae82a436.so",
-            "bytes": 83686128,
-            "sha256": "6db1ae82a43610030e3be326f36cf5f5323ed0f2adf4bb9222e5445e98b86e03"
-          }
-        },
-        {
-          "name": "libQnnHtp.so",
-          "file": {
-            "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-libQnnHtp-429b74453f3d.so",
-            "bytes": 2642248,
-            "sha256": "429b74453f3dc95c6b94ca20894b4e5f08fbf8604bf339e37ef30fc17819e542"
-          }
-        }
-      ],
-      "analysisModel": {
-        "url": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-b18-qnn-analysis-9d59f1f819ab.onnx",
-        "bytes": 54613844,
-        "sha256": "9d59f1f819ab0e3d848b72325e66d71909d59d75654b7a61435c6fae593397e0",
-        "format": "onnx"
-      },
-      "source": "https://raw.githubusercontent.com/SoumyaK4/SWHub/SWHub/Assets/Katago/qnn/katago-1.18.2-android-arm64-qnn-v1-human-opencl-sources-7fd8e64c8b38.tar.gz",
-      "requiresOpenCl": true
     }
-  ]
+  ],
+  "models": {
+    "analysis": {
+      "url": "https://katagoarchive.org/g170/neuralnets/g170-b6c96-s175395328-d26788732.bin.gz",
+      "bytes": 3827339,
+      "sha256": "f57fddf4672364d385d6ab177364ab819810d1123e229cb2649c4f337a2160b1"
+    },
+    "human": {
+      "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/b18c384nbt-humanv0.bin.gz",
+      "bytes": 99066230,
+      "sha256": "637746e44f0efe00ad1245a50aa9bbf0716efe364c43965ead97bd6835d84ab5"
+    }
+  }
 }
