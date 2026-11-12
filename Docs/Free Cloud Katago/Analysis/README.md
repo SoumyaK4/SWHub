@@ -1,10 +1,10 @@
 # Two Free Ways to Run Cloud KataGo
 
-```Last updated: 1 Nov 2026, Katago v1.18.2```
+```Last updated: 13 Nov 2026, Katago v1.18.2```
 
 These two options can be used **individually or together**, depending on how much cloud GPU time you need.
 
-The latest version tested on [SWHub](https://github.com/SoumyaK4/SWHub), but should work fine in Katrain or similar apps that supports Cloud KataGo.
+The latest version tested on [SWHub](https://github.com/SoumyaK4/SWHub), but should work fine in Katrain or similar apps that supports JSON based Cloud KataGo.
 
 ## 1. Google Colab
 
@@ -18,7 +18,7 @@ Google Colab provides access to a **T4 GPU**, usually giving around **3–5 hour
 ### Cons
 
 * Colab may disconnect the runtime if the notebook itself receives no interaction for roughly **10 minutes**.
-* Because of this, you need to run the full setup again whenever you start a fresh session. This usually takes around **7–10 minutes**.
+* Because of this, you need to run the full setup again whenever you start a fresh session. This usually takes around roughly **5 minutes**.
 
 ---
 
@@ -29,7 +29,7 @@ Modal provides **$30 of free credits every month**.
 ### Pros
 
 * After the initial setup, you generally don't need to manage the server manually.
-* The server automatically shuts down when it is not being used, so credits aren't wasted on an idle instance.
+* The server automatically shuts down when it is not being used, so credits aren't wasted.
 * Storage remains **persistent**, so you don't need to download and set everything up again each time.
 * You can set your usage limit to **$29** in Modal's settings so your card won't be charged if you reach the free-credit limit.
 * The free credits reset at the beginning of every month.
@@ -56,6 +56,8 @@ Most importantly, you won't have to repeat the full KataGo setup every time you 
 ---
 
 # Setup
+
+I've improved it enough so you don't have to look at bunch of code anymore haha. after running the first cell you get a GUI.
 
 | Google Colab | Modal |
 | --- | --- |
