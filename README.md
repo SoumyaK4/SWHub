@@ -67,7 +67,7 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 
 - **Build your reading strength.** Grading and Endgame exams, Time Frenzy, adaptive Ranked Mode, custom exams and spaced repetition.
 - **Try a new challenge.** Breakthrough mixes Best move and Who is ahead with 60-second puzzles. Subjects offers eight categories with kyu/dan progression and HumanSL opponents.
-- **Learn from your games.** KataGo suggestions, score and win-rate graphs, variations and performance reports. Game Focus saves completed reviews for offline use and turns mistakes into drills.
+- **Learn from your games.** KataGo suggestions, score and win-rate graphs, variations and performance reports. Game Focus saves completed reviews for offline use and offers mistake, missed-chance and counting drills.
 - **Make a study library.** Edit SGFs, import a board photo, browse downloadable Joseki, and use Kombilo to search patterns across your own games.
 - **Play at your pace.** Career Mode offers HumanSL opponents, random styles and an 18K–9D ladder. Online servers retain their own rules and controls.
 - **Settle into your own layout.** Phone, tablet and desktop layouts, board themes, dark palettes, resizable panels and configurable shortcuts. Android tablets adapt when rotated, where space permits.
@@ -79,7 +79,7 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 3. **Set up KataGo when you need it.** Use desktop Auto Setup or connect a remote engine for analysis. Career and Subjects need both regular KataGo and HumanSL. The [cloud notebooks below](#free-cloud-katago) offer another way to get started.
 4. **Find help inside the app.** Open **Settings → FAQ** or the **?** button for detailed feature guides. On desktop, **F1** opens shortcut search and **F2** opens Settings. Other app shortcuts are opt-in.
 
-> **Android local KataGo is experimental.** Open **Settings → Local KataGo** to download and test it, then enable it. Local engine choices stay hidden until enabled. It compares compatible downloaded engines, with separate model downloads. Available backends depend on your phone and the published downloads. Remote engine is always available.
+> **Android local KataGo is experimental.** Open **Settings → Local KataGo** to download and test it, then enable it. Local engine choices stay hidden until enabled. It compares compatible CPU/GPU engines, using a compact older analysis model for speed and the original HumanSL model. The smaller analysis model is weaker. Available backends depend on your phone and the published downloads. Remote engine is always available.
 
 On Linux, unlock your desktop keyring before opening SWHub. Saved server passwords use device secure storage and are not included in app backups.
 
@@ -134,7 +134,7 @@ Keep your existing username and key always securely saved somewhere because its 
 
 **App settings and Career progress** cannot be backed up.
 
-v0.2.13 prepares older saved data for later releases, including features you have not opened. Install and open v0.2.13 before upgrading from an older version to a later release, and keep it open until preparation finishes. Existing statistics backup files remain supported.
+Before upgrading from an older version to v0.2.14 or later, install and open v0.2.13 and let saved-data preparation finish. Later versions check existing installations before opening their data. Fresh installations do not need the intermediate version. Existing statistics backup files remain supported.
 
 </details>
 
