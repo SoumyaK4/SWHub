@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.2.14
+
+- Keep the board's overall size consistent across coordinate modes in Local Board, Teaching Rooms, Pattern Search, Joseki, puzzle solving, Game Focus drills, OGS review, Appearance previews and task editing. Reserve external border space only for outside coordinates in both wide and compact layouts.
+- Add optional KataGo Contribution evaluation bars with Black-perspective win rate and score lead. Use slim, equal-width desktop bars with stacked signs and numbers, compact inline labels and smooth transitions that respect reduced motion.
+- Add Game Focus missed-chance and counting drills, saved points-recovered feedback and rank-based continuations of the primary accepted answer. Reanalyze existing games to populate the new evidence.
+- Automatically scan Game Focus positions at 100 visits and deepen likely mistakes and counting positions up to 1,000 visits, retaining configured time limits and offline reviews.
+- Restore Modal 1.5.5 and FastAPI 0.141.1 in both Modal KataGo notebooks, including their embedded control-panel copies.
+- Replace Reading with Consistency in the report and Game Focus radar. Show the percentage of analyzed moves below the current KataGo Mistake threshold after ten scored moves, with settings-aware mistake and blunder counts in Details. Apply changed thresholds from saved losses without reanalysis. Keep the other rank axes and Overall unchanged, and refresh derived caches offline.
+- Decode remote KataGo results in the background, yield between result batches, reuse unchanged board, rank and suggestion data during review, and stop the engine indicator animation while idle. Show a single Estimated rank in report headlines. Keep rank stability in axis tooltips and category Details, without rank-fit move counts.
+- Show stability ranges and influential moves in KataGo rank reports using the original HumanSL model, plus a territory/influence balance. Distinguish individual-game fits from Game Focus comparisons across games, with whole-game resampling and offline cached evidence.
+- Show Correct/Wrong feedback only at explicitly marked result nodes during puzzle review, avoiding repeated wrong popups for unmarked moves after an attempt.
+- Show download, unpacking and validation progress with elapsed time for puzzle and Joseki data on desktop and Android. Keep Android's screen awake through setup and first puzzle-data activation.
+- Match coordinates in Joseki comments to board labels, reusing continuation numbers and assigning consistent letters to other referenced points.
+- Play move sounds on Joseki, Subjects, Game Focus drills and local review boards, with shared stone/capture and pass settings. Keep initial loads, invalid clicks, backward navigation and diagram previews silent.
+- Support verified multipart Joseki downloads when a future dictionary exceeds the single-file hosting limit. Reassemble one database and preserve installed data on failed or cancelled downloads.
+- Match current OGS bot Fischer limits: v2 checks maximum time and increment, while v1 retains its initial-time limit. Ignore malformed bot clock ranges in challenge controls.
+- Stop Variant Server lobby polling and event subscriptions while covered or the app is inactive, then refresh on return. Keep active room traffic independent.
+- Recover unresponsive leaderboard connections after long app sessions. Retry leaderboard loads and account restore once on a fresh connection, and let later stats syncs recover after an upload timeout.
+- Close stats connections after sync and release leaderboard subscriptions when hidden. Bound room connection/state waits and close room HTTP clients on timeout, with no background keepalive traffic.
+- Remove the saved-data preparation screen from ordinary startup. Keep secure credential storage, old statistics backup restoration and current data recovery.
+- Use b6c96 as the only standard objective model for Android local KataGo, with the original full-precision HumanSL model unchanged. Compare CPU/OpenCL engines using the same analysis model, balance search and HumanSL review speed, and exclude older model-specific NPU packages from default setup. Existing installations can switch through Repair or update downloads.
+- Keep cold Android GPU startup separate from the HumanSL test deadline so slower compilation does not cancel model validation.
+
 ## 0.2.13
 
 - Preserve verified metadata repairs during Pattern Management's name/rank normalization and uncertain-name marking. Keep manual edits available and retain verification through reindexing and database export.
