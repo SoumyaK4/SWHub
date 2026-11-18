@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.2.15
+
+- Give Find puzzle a lecture-search-style layout, with a scrollable left controls sidebar and a larger centered board on wide screens. Keep all board sizes, Black/White/Empty tools, rank/type filters, Clear and Find, with controls below the board on narrow screens. Make Empty erase stones by clicking or dragging without leaving markers or requiring empty points in search results.
+- Enable Show lecture matches in Pattern Search's three-dot menu to follow its full-board, corner or selected-area search, including rotations, reflections and colour swaps. The toggle is remembered and defaults to off. Include active recognized video positions in the downloadable BadukTube data.
+- Add KGS Community > Mailbox for offline messages, replies and confirmed deletion. Keep messages to online players as unsent direct-chat drafts. Recover temporary KGS connection failures with capped backoff and check the existing session when the app resumes, without replaying moves or messages.
+- Keep the app usable without audio, preserve ko history across setup edits, and reject duplicate setup-branch pastes without overwriting notes. Reject truncated SGF collections instead of silently loading a prefix.
+- Validate assigned teaching moves against the authoritative board, including captures, suicide, ko and teacher setup edits. Keep each voice listener's connection state separate and cancel microphone startup when speaking permission ends.
+- Bound OGS HTTP requests and cancel their underlying connections, preserving authentication recovery without replaying timed-out writes. Keep English as the first-launch language and preserve saved language choices.
+- Show Tygem's confirmed rank-up and rank-down messages, using a fresh own-profile reply rather than adding relative notifications to a cached rank.
+- Match Tygem Score's card countdown and automatic last-card choice, display server candidate points, and preserve resignation during eligible pauses. Keep completed mini-games closed to late gameplay updates.
+- Check forbidden Black moves in modern 15×15 Tygem Renju games, including the native winning-five priority and recursive false-three rules, with localized explanations. Preserve normal Omok and server-authoritative moves and results.
+- Accept native Tygem approval metadata refreshes without relaxing reviewed identities or game terms. Keep Undo visible but disabled when unavailable, updating it when negotiation state changes.
+- Keep Fox Flying Knife's last-move marker on the latest stone throughout an active three-stone burst, including the pauses between placements and numbered display modes.
+- Add Local Board Game info for player names, ranks, rules, komi and result. Save accepted metadata edits with the current study, including edit undo/redo, SGF exports and Open in KataGo.
+- Add Lectures as the last main navigation destination, with a downloadable BadukTube catalogue, offline title and filter search, channel names, ordered collections and an embedded video dialog with browser/YouTube fallbacks. Catalogue hosting requires publication before downloads are available.
+- Require Android 7+, macOS 11+ and WebKitGTK 4.1 on Linux for the new video player. Linux video playback also needs GStreamer codecs.
+- Save Game Focus scan, deep-analysis and HumanSL results as they arrive. Retry only unfinished positions, allow productive batches beyond five minutes, and show separate analysis-stage progress.
+- Keep writable desktop KataGo config copies in application support and logs in the OS cache. Launch local analysis from the same directory as setup, handle config-write failures, and keep successful setup results when temporary cleanup is locked.
+- Honor a trusted SSL_CERT_FILE PEM bundle for KataGo downloads while retaining certificate verification, with actionable certificate errors.
+- Allow external Homebrew and custom KataGo engines in the ad-hoc signed macOS app. Preserve prepared sandbox settings and data locations on upgrade, without changing update keys or the v0.2.13 upgrade requirement.
+- Add Global Tygem 9×9, 15×15 Omok and 19×19 Score matchmaking with separate authoritative boards and zero-stake admission. Share four room places across ordinary boards and mini-games, with relay rooms using two.
+- Add Tygem private chat, friends, blocking and Inbox, with profile watch invitations, five native text encodings and localized quick phrases. Inbox sending requires server-approved free Global allowance and never follows a paid retry.
+- Add reviewed Tygem Fischer terms, bilateral draw requests and server-assisted automatic counting in supported 19×19 games. Keep unknown-cost AI judgement unavailable.
+- Add a Tygem saved-account picker with one active login, plus room tabs that retain watched boards and chat while browsing. Recover connection failures through fresh logins and authoritative room snapshots without replaying pending actions.
+- Keep Tygem room geometry from the joined room when watching or starting another game. Contain malformed game snapshots to their room so the lobby and other boards stay connected.
+- Bring Tygem closer to Fox with matchmaking cards, centered room tabs, a persistent wide rail with Messages and Session, and matching mini-game board layouts. Keep watched-room sounds in the selected room while unfinished playing rooms can sound in the background.
+- Show Tygem records in direct 19×19, 9×9, Omok and Score tabs, with visible My games and All games filters and retained page state.
+- Handle native Tygem room headers throughout 9×9, Omok and Score entry, including full game snapshots. Restore existing rooms from server entry replies using their actual game type, with an explanatory notice. Share the mini-game connection with archive reads to avoid competing logins.
+- Correct White/Black identities and native SGF names in Tygem archives. Give Omok and Score replays the shared record layout, saved board appearance, full navigation and SGF export.
+- Show last-move rings on Tygem mini-game, private Omok and replay boards. Wait for confirmed resignation and room exit before closing mini-game connections, preserving uncertain rooms and directing retained archive games back to Play.
+- Add free Global Tygem 9×9 invitations and room play, plus zero-stake Omok with native Renju rules and private chat.
+- Add server-approved Tygem rematches and shared-review hosting from an ordinary waiting room, preserving exact seats and presenter permissions. Add permitted Global review/comment rooms with server-confirmed stones, marks and paired review. Relay eligible watched games on a separate shared board while retaining the source feed.
+- Add confirmed virtual-point stakes and roses in eligible Tygem watched games, with a shared authoritative balance, explicit costs and no purchase or recharge actions.
+- Retain Fox focus-game announcements in System chat, with server-requested Watch popups and a separate announcement sound setting. Show eligible smaller-board and capture automatches from current server metadata, and close searches on the server’s timeout notice. Label board sizes clearly and keep rank-locked capture queues visible with their limits.
+- Show received Fox broadcast announcements with Close, countdown and daily suppression. Preserve public observer membership badges without exposing paid account actions.
+- Keep full KataGo move analysis at the end of a line, including point loss, rank comparisons, Intuition and move strength. Preview links use the reviewed move's original position.
+- Restore the full byo-yomi period for a waiting Fox player when a sparse clock sample omits main time, in both watch and play rooms. Keep stopped zero clocks from consuming a period while paused or finished.
+
 ## 0.2.14
 
 - Keep the board's overall size consistent across coordinate modes in Local Board, Teaching Rooms, Pattern Search, Joseki, puzzle solving, Game Focus drills, OGS review, Appearance previews and task editing. Reserve external border space only for outside coordinates in both wide and compact layouts.

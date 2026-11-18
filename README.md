@@ -61,6 +61,7 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 | **Puzzles** | Practise collections and topics, take exams, revisit mistakes with spaced repetition, save favourites, or try Breakthrough and Subjects. |
 | **Tools** | Analyse with KataGo, review games and practise drills in Game Focus, explore Joseki, search Game Patterns, or study on a local board. |
 | **Play** | Climb Career Mode, connect to OGS, KGS, Pandanet, FoxWQ or Tygem, explore Variant Server, race through Tsumego Battles, or share a Teaching Room. |
+| **Lectures** | Download BadukTube data, search titles or indexed board patterns offline, then watch matching video moments in the app or your browser. |
 | **Me** | Follow your progress, activity and personal bests, link playing profiles, and optionally sync training statistics. |
 
 ## A few highlights
@@ -75,11 +76,13 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 ## Get started
 
 1. **[Download SWHub](https://github.com/SoumyaK4/SWHub/releases/latest)** for Windows, Linux, macOS or Android.
-2. **Choose a starting point.** Open Puzzles for reading practice, Tools for study, or Play for games. Puzzles and Joseki offer their data downloads when first opened. Installed data works offline, puzzle-data updates take effect after restarting SWHub.
+2. **Choose a starting point.** Open Puzzles for reading practice, Tools for study, Play for games, or Lectures for BadukTube videos. Puzzles, Joseki and Lectures offer their data downloads when first opened. Installed data works offline, puzzle-data updates take effect after restarting SWHub.
 3. **Set up KataGo when you need it.** Use desktop Auto Setup or connect a remote engine for analysis. Career and Subjects need both regular KataGo and HumanSL. The [cloud notebooks below](#free-cloud-katago) offer another way to get started.
 4. **Find help inside the app.** Open **Settings → FAQ** or the **?** button for detailed feature guides. On desktop, **F1** opens shortcut search and **F2** opens Settings. Other app shortcuts are opt-in.
 
 > **Android local KataGo is experimental.** Open **Settings → Local KataGo** to download and test it, then enable it. Local engine choices stay hidden until enabled. It compares compatible CPU/GPU engines, using a compact older analysis model for speed and the original HumanSL model. The smaller analysis model is weaker. Available backends depend on your phone and the published downloads. Remote engine is always available.
+
+Requires Windows 10 1809+, macOS 11+ or Android 7+. Linux needs WebKitGTK 4.1 and GStreamer video codecs. On Ubuntu/Debian, install `libwebkit2gtk-4.1-0`, `gstreamer1.0-plugins-bad` and `gstreamer1.0-libav`.
 
 On Linux, unlock your desktop keyring before opening SWHub. Saved server passwords use device secure storage and are not included in app backups.
 
@@ -130,11 +133,11 @@ Keep your existing username and key always securely saved somewhere because its 
 | **Statistics** | Training history, favourites, SRS, Subjects/Breakthrough progress, and your linked username and sync key. | Replaces local training statistics and account linkage. Keep the backup private. |
 | **Game Focus ZIP** | All profiles, the selected profile, accounts, imported games, saved analysis, drills and review history. | Validates the archive, then replaces the entire local Game Focus library. Close Game Focus first. Training statistics are unaffected. |
 
-**On desktop**, close SWHub before copying data then backup everything from `Documents/SWHub`.
+**On desktop**, close SWHub before copying data then backup everything from `Documents/SWHub`. Upgraded Mac installations may retain that folder under `~/Library/Containers/com.soumyak4.swhub/Data/Documents/SWHub`. Keep that existing container when updating.
 
 **App settings and Career progress** cannot be backed up.
 
-Before upgrading from an older version to v0.2.14 or later, install and open v0.2.13 and let saved-data preparation finish. Later versions check existing installations before opening their data. Fresh installations do not need the intermediate version. Existing statistics backup files remain supported.
+When upgrading from v0.2.12 or earlier to v0.2.14 or later, install and open v0.2.13 and let saved-data preparation finish. Later versions check existing installations before opening their data. Fresh installations do not need the intermediate version. Existing statistics backup files remain supported. From v0.2.13 or v0.2.14, update normally.
 
 </details>
 
