@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.2.16
+
+- Use confirmed black and white stones to correct a one-line grid slip during a camera pan. Recognize takebacks while unrelated intersections are unclear and preserve both lines when a player lifts the last stone and plays it elsewhere between samples.
+- Keep Fox countdowns accurate across pauses and preserve both players’ dead-stone selections during Tygem scoring.
+- Import the full KGS main line when an archived game opens on an earlier move or variation. Show Pandanet territory only after a complete scoring reply.
+- Restore pending OGS undo requests when reopening or reconnecting to a game, including how many moves the players agreed to take back.
+- Reduce KataGo UI stalls during full-game analysis and while stepping through moves. Update background progress without rebuilding the board, and render only nearby move-tree nodes.
+- Fix an error when closing KataGo or hiding its controls before the engine indicator has animated.
+- Show that KataGo is starting while an SGF waits for a remote connection. Keep the connection error visible if startup fails.
+- Add Tygem rank and results charts in Me and regular Tygem archive imports in Game Focus.
+- Limit new Game Focus imports to 19×19, including local files, server archives, and games added from KataGo.
+- See Tygem's reported online counts on sign-in and when switching servers. Open Switch server or Logout directly from the left rail on wide layouts or More on phones. The Users list shows room numbers only for the connected server.
+- Keep Tygem connections open when they receive unhandled commands or unreadable lobby and room updates. Limit malformed join replies to the room request they belong to.
+- Send Tygem's pass notice before its board update and enter counting after both players pass. Keep scoring active if the final pass echo arrives late.
+- From debug to public:
+    - Video to SGF
+    - Camera vs Katago
+    - Pro Games
+
 ## 0.2.15
 
 - Give Find puzzle a lecture-search-style layout, with a scrollable left controls sidebar and a larger centered board on wide screens. Keep all board sizes, Black/White/Empty tools, rank/type filters, Clear and Find, with controls below the board on narrow screens. Make Empty erase stones by clicking or dragging without leaving markers or requiring empty points in search results.
@@ -14,7 +33,7 @@
 - Accept native Tygem approval metadata refreshes without relaxing reviewed identities or game terms. Keep Undo visible but disabled when unavailable, updating it when negotiation state changes.
 - Keep Fox Flying Knife's last-move marker on the latest stone throughout an active three-stone burst, including the pauses between placements and numbered display modes.
 - Add Local Board Game info for player names, ranks, rules, komi and result. Save accepted metadata edits with the current study, including edit undo/redo, SGF exports and Open in KataGo.
-- Add Lectures as the last main navigation destination, with a downloadable BadukTube catalogue, offline title and filter search, channel names, ordered collections and an embedded video dialog with browser/YouTube fallbacks. Catalogue hosting requires publication before downloads are available.
+- Add Lectures as the last main navigation destination, with a downloadable BadukTube catalogue, offline title and filter search, channel names, ordered collections and an embedded video dialog with browser/YouTube fallbacks. Supports finding videos using board patterns.
 - Require Android 7+, macOS 11+ and WebKitGTK 4.1 on Linux for the new video player. Linux video playback also needs GStreamer codecs.
 - Save Game Focus scan, deep-analysis and HumanSL results as they arrive. Retry only unfinished positions, allow productive batches beyond five minutes, and show separate analysis-stage progress.
 - Keep writable desktop KataGo config copies in application support and logs in the OS cache. Launch local analysis from the same directory as setup, handle config-write failures, and keep successful setup results when temporary cleanup is locked.

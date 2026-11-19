@@ -59,19 +59,19 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 | Destination | Find your next activity |
 | --- | --- |
 | **Puzzles** | Practise collections and topics, take exams, revisit mistakes with spaced repetition, save favourites, or try Breakthrough and Subjects. |
-| **Tools** | Analyse with KataGo, review games and practise drills in Game Focus, explore Joseki, search Game Patterns, or study on a local board. |
+| **Tools** | Study on a local board, analyse with KataGo, practise drills in Game Focus, explore Joseki, search game patterns, browse Pro Records, record live or filmed games with Video to SGF & optionally broadcast to OGS demo boards, and follow KataGo’s score as moves arrive, play against local or cloud KataGo on a physical board, or contribute to KataGo. |
 | **Play** | Climb Career Mode, connect to OGS, KGS, Pandanet, FoxWQ or Tygem, explore Variant Server, race through Tsumego Battles, or share a Teaching Room. |
-| **Lectures** | Download BadukTube data, search titles or indexed board patterns offline, then watch matching video moments in the app or your browser. |
+| **Lectures** | Download BadukTube data, search titles and indexed board patterns offline, then watch matching video moments in the app. |
 | **Me** | Follow your progress, activity and personal bests, link playing profiles, and optionally sync training statistics. |
 
 ## A few highlights
 
 - **Build your reading strength.** Grading and Endgame exams, Time Frenzy, adaptive Ranked Mode, custom exams and spaced repetition.
 - **Try a new challenge.** Breakthrough mixes Best move and Who is ahead with 60-second puzzles. Subjects offers eight categories with kyu/dan progression and HumanSL opponents.
-- **Learn from your games.** KataGo suggestions, score and win-rate graphs, variations and performance reports. Game Focus saves completed reviews for offline use and offers mistake, missed-chance and counting drills.
-- **Make a study library.** Edit SGFs, import a board photo, browse downloadable Joseki, and use Kombilo to search patterns across your own games.
+- **Learn from your games.** Use KataGo suggestions, score and win-rate graphs, variations and performance reports. Game Focus imports 19×19 games from files and supported online servers, and offers offline reviews and drills.
+- **Make a study library.** Edit SGFs, scan board positions, and convert numbered kifu photos to SGF with close-ups for unclear numbers. Browse downloadable Joseki or search patterns across your own or others' games with Kombilo.
 - **Play at your pace.** Career Mode offers HumanSL opponents, random styles and an 18K–9D ladder. Online servers retain their own rules and controls.
-- **Settle into your own layout.** Phone, tablet and desktop layouts, board themes, dark palettes, resizable panels and configurable shortcuts. Android tablets adapt when rotated, where space permits.
+- **Settle into your own layout.** Phone, tablet and desktop layouts, board themes, dark(I do not like light theme yes) palettes, resizable panels and configurable shortcuts. Android tablets adapt when rotated, where space permits.
 
 ## Get started
 
