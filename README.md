@@ -38,16 +38,16 @@ SWHub is a personal Swiss army knife for **Go / Baduk / Weiqi**. To solve tsumeg
 <table width="100%">
   <tr>
     <td align="center" width="33%">
-      <a href="./Images/Screenshots/Puzzles.png"><img alt="SWHub Puzzles screen" src="./Images/Screenshots/Puzzles.png" width="100%"></a><br>
+      <a href="./Images/Screenshots/Puzzles.gif"><img alt="SWHub Puzzles screen" src="./Images/Screenshots/Puzzles.gif" width="100%"></a><br>
       <strong>Puzzles</strong><br><sub>Reading practice and training modes</sub>
     </td>
     <td align="center" width="33%">
-      <a href="./Images/Screenshots/Tools.png"><img alt="SWHub Tools screen" src="./Images/Screenshots/Tools.png" width="100%"></a><br>
+      <a href="./Images/Screenshots/Tools.gif"><img alt="SWHub Tools screen" src="./Images/Screenshots/Tools.gif" width="100%"></a><br>
       <strong>Tools</strong><br><sub>Analysis, review and study</sub>
     </td>
     <td align="center" width="33%">
-      <a href="./Images/Screenshots/Play.png"><img alt="SWHub Play screen" src="./Images/Screenshots/Play.png" width="100%"></a><br>
-      <strong>Play</strong><br><sub>Online games and shared sessions</sub>
+      <a href="./Images/Screenshots/Play.gif"><img alt="SWHub Play screen" src="./Images/Screenshots/Play.gif" width="100%"></a><br>
+      <strong>Play & Lectures</strong><br><sub>Online games etc.</sub>
     </td>
   </tr>
 </table>
@@ -153,19 +153,6 @@ Subjects results and pass rates appear in **Statistics → Charts** under **Subj
 </details>
 
 <details>
-<summary><strong>How do I use FoxWQ?</strong></summary>
-
-Open **Play → FoxWQ** and sign in with your Fox account. The bundled client connects directly. Browse players and broadcasts, play, chat, and review or download game records.
-
-Controls follow the app language, while player messages keep their original text. Small screens use bottom navigation and an overflow menu in the lobby, with the bar hidden inside rooms. Wide screens use a feature rail. See **Settings → FAQ → Play Page → FoxWQ** for detailed guidance.
-
-If a connection fails during a game, Fox tries to reconnect up to four times while keeping the last confirmed board visible. If recovery fails, you return to Play. Pending actions are never automatically resent.
-
-This is an unofficial FoxWQ Client. Server compatibility and account safety cannot be guaranteed. Consider using a spare account.
-
-</details>
-
-<details>
 <summary><strong>How do Teaching Rooms and Tsumego Battles work?</strong></summary>
 
 **Teaching Rooms** gives you shared boards, chat and voice. Enter the access password once on your device, then create or join a room. Studies preserve imported SGF metadata, comments, markers and the selected player to move. Teachers can let selected students play or use voice.
@@ -187,6 +174,15 @@ SWHub checks for updates on every app launch. You can read release notes before 
 
 </details>
 
+<details>
+<summary><strong>Some clarifications!!!!</strong></summary>
+
+SWHub integrates unofficial FoxWQ & Tygem Clients. Server compatibility and account safety cannot be guaranteed. Consider using a spare account.
+
+The tsumegos mainly come from [https://steamcommunity.com/app/1264970/workshop/](https://steamcommunity.com/app/1264970/workshop/) and some other sources like [OGS](https://online-go.com/puzzles), [GoMagic](https://gomagic.org/downloads/), [TsumegoDojo](http://tsumegodojo.wordpress.com/), [Tsumego Villain](https://github.com/tasuki/tsumego-villain) etc.
+
+</details>
+
 ## Community
 
 - Report any issues/requests **[here](https://github.com/SoumyaK4/SWHub/issues)** or **[Discord](https://discord.gg/ptjzTWU9SP)** with the steps to reproduce it and your platform.
@@ -195,8 +191,9 @@ SWHub checks for updates on every app launch. You can read release notes before 
 
 ## Puzzle reminder for myself
 
-Add solution moves for tasks **162032–162121** in
-**Troublesome** and **Diabolical** (90 puzzles), then publish updated puzzle data.
+Add solution moves for:
+Troublesome (10) — 162034, 162036–162037, 162043, 162049, 162051, 162061–162062, 162064, 162068
+Diabolical (9) — 162073, 162078, 162081–162082, 162084, 162099–162100, 162103, 162114
 
 ## License
 
