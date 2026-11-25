@@ -6,7 +6,3 @@ The build-only OpenCL stub must not be distributed. Models have separate license
 CPU Eigen source: https://gitlab.com/libeigen/eigen/-/tree/3.4.0
 CPU v2 source bundle: katago-1.18.2-android-source-v2.tar.gz
 GPU v1 source bundle remains katago-1.18.2-android-source-v1.tar.gz
-
-QNN/OpenCL hybrid source/runtime/model provenance: qnn/SOURCE.json
-QNN publication candidate: qnn/, tested Qualcomm SM7550, Android API31+, vendor OpenCL
-Full-precision original HumanSL, separately calibrated QNN objective, all files outside the APK

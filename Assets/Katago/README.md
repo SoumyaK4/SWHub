@@ -1,17 +1,9 @@
 # Experimental Android KataGo downloads
 
-The current catalog offers native CPU and
-OpenCL GPU engines, one b6 objective model and the HumanSL.
-Both models download directly from their upstream URLs. No model weights are
-uploaded here or included in the APK.
+The catalog offers native Eigen CPU and OpenCL GPU engines for 64-bit ARM Android devices. SWHub downloads the compact b6 analysis model and the original FP32 HumanSL model directly from upstream. The smaller analysis model favors speed over strength.
 
-The current CPU package is `katago-1.18.2-android-arm64-v8a-cpu-v2.so`, with
-`katago-1.18.2-android-source-v2.tar.gz`. The current GPU package is
-`katago-1.18.2-android-arm64-v8a-opencl-v1.so`, with
-`katago-1.18.2-android-source-v1.tar.gz`. Both pairs are required, despite their
-different revision numbers. Keep the source archives and license notices with
-the matching binaries.
+The updated SWHub app runs ordinary analysis with the b6 model and uses HumanSL when a rank policy is requested. On capable phones, setup can compare a parallel CPU profile with the other available settings. Open **Settings → Local KataGo → Test performance** to retest an existing installation. Use **Repair or update downloads** to check for newer packages or fix damaged files.
 
-An updated APK supplies review-aware tuning and the startup-deadline fix.
-Existing installations get the current model through Repair or update downloads.
-The smaller objective model trades analysis strength for speed.
+The CPU v2 engine ships with `katago-1.18.2-android-source-v2.tar.gz`. The OpenCL v1 engine ships with `katago-1.18.2-android-source-v1.tar.gz`. Keep the matching source archives and license notices alongside the engines.
+
+Use `sha256sum -c SHA256SUMS` to verify the files in this folder.
