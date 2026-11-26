@@ -1,5 +1,48 @@
 # Changelog
 
+## 0.2.17
+
+- Start ordinary local Android KataGo analysis with the faster saved board profile and load HumanSL when rank guidance needs it.
+- Use Quick retest in Android Local KataGo settings to compare previously tested engine settings again.
+- On compact Android screens, show KataGo graphs above the board and player info, analysis, details and notes below it. Keep move navigation available while scrolling.
+- Enable background Game Focus in Android Local KataGo settings to keep local reviews running when you switch apps or lock the screen. Pause and save progress from the notification.
+- Keep KataGo responsive during full-game analysis and reuse finished results while stepping through a review.
+- Use KataGo’s A/P button to choose Black or White and play from the current position. Use the same button to return to analysis. The recorded continuations stay in the move tree.
+- Compare searched moves in eligible Game Focus endgame mistake drills. Choose which to play first, optionally estimate the score gap, and replay the saved replies.
+- Show each board size beside its game number in the KataGo Contribution dropdown, including rectangular boards.
+- Preserve every recorded rank in Pattern Search. Rank Normalise fills blanks only between agreeing dated records for the same player, and repeated runs make no further changes. Respect verified player names during rank inference and include `?` in the missing-rank filters.
+- Create an Annotated Pattern Search database to keep original SGF files and read comments below the date filters while exploring a game.
+- Mark the next move in Pattern Search game exploration with a circle in the stone’s color, leaving SGF labels visible on the same point.
+- Keep the recorded line intact when trying a move in Pattern Search game exploration. Return to mainline resumes the recorded game.
+- Keep SGF collections intact when saving a game in KataGo. Preserve separate study variations, legacy file encodings and New Zealand rule moves when importing records.
+- Open 9×9 and 13×13 GIB files in KataGo at their recorded board size, with handicap stones placed for that board.
+- Apply KataGo’s Rank guide to both players throughout suggested variations. Reuse analyzed positions, show the finished line in Analysis.
+- Label the peak move likelihood and describe rank-based score comparisons against typical moves at that rank.
+- Read stones more reliably in dim light and glare in Video to SGF and Camera vs KataGo. Mark unclear intersections when reviewing a board photo in Scan Position. Warn about unconfirmed moves at the end of a video.
+- Read more faded move numbers on stones in Kifu to SGF. In Video to SGF, pause for review when hidden stones leave multiple possible move orders.
+- Read white stones under stronger color casts and lower light, recover the grid after camera shake, and wait for visible capture removals in Video to SGF and Camera vs KataGo. Keep delayed OGS demo moves in sync with the corrected recording.
+- Check intermediate video frames before pausing for an unclear move order. Correct an earlier placement or pass from the recorded board and replay its legal continuation, including on an OGS demo.
+- Add Teaching Mode to Camera vs KataGo with bundled Jeff reactions. In auto-undo mode, a human voice says “Undo” every five seconds while the camera waits for the previous position.
+- Refresh open Lectures after a catalogue update and resume completed Tsumego Battle submissions after reconnecting.
+- Expand lectures pattern coverage.
+- Open Lectures Pattern Search faster after restarting the app or updating lecture data.
+- Join or host Kibitz rooms in Play → OGS to watch games, demos and reviews together. Switch between the watched board’s chat and Kibitz chat, share variations, and open player profiles from Users. Wide game rooms put players, chat and board actions in one resizable sidebar.
+- Open Simuls from the signed-in OGS top bar on desktop to play two to six games in one grid. Add ongoing games or send a direct challenge while playing. Mix board sizes and see your clock and opponent on each board. Simuls hides coordinates and runs without chat or sounds.
+- Show avatars in OGS room user lists and put Pass in the right sidebar on wide reviews. Replay recorded stone replacements and their undos in demos.
+- Open OGS AI Review after a game or from OGS Records. See the current position’s score lead and tap the graph to jump to a move. Switch between the graph and Players on wide screens while keeping the review loaded.
+- Show each player’s live clock beside their name on OGS Watch board cards, including the remaining byo-yomi periods.
+- Find OGS reviews in Game reviews, including reviews for that game shared in main chat that your account can open.
+- Show your remaining time in the OGS correspondence list, including while you wait for your opponent. Mark paused clocks.
+- Show Passed by the player’s name in OGS correspondence games, including when you reopen a game on a pass.
+- With Stone animation enabled, your stones sweep in from the lower right in online games with either color. Spectator and offline boards show Black from the lower right and White from the upper left. The move marker appears just after the stone lands.
+- Count aloud from 10 to 1 on running Play clocks, including Fischer. Announce two periods left and the last period in Japanese byo-yomi games, including on KGS and Pandanet.
+- Pause board and game-room shortcuts, including Pass and move navigation, while a dialog covers the board.
+- Add opt-in desktop bindings for timed Breakthrough answers, Video to SGF capture and review, Return to mainline in Pattern Search, and board focus in OGS Simuls. KataGo Contribution uses shared move navigation bindings.
+- Retire the 121 regular Count puzzles and the Count Hard Mode setting. Play Who is ahead in Breakthrough.
+- Add a 20-second margin guess to Breakthrough’s Who is ahead puzzles with saved KataGo estimates. Review the updated win probability and score lead after the second step.
+- Show distinct regular, Subjects, and Breakthrough solves on Me. Existing Subjects solves count, and Breakthrough tracks individual solves from this version.
+- Remove the experimental Dart Fox codec and an unused score SDK route. New Joseki releases use SQLite, and existing dictionaries remain readable. The v0.2.13 sync and task bridge remains available.
+
 ## 0.2.16
 
 - Use confirmed black and white stones to correct a one-line grid slip during a camera pan. Recognize takebacks while unrelated intersections are unclear and preserve both lines when a player lifts the last stone and plays it elsewhere between samples.

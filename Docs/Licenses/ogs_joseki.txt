@@ -1,6 +1,6 @@
 OGS Joseki Explorer content
 
-Source: https://online-go.com/joseki/15081
+Source: https://online-go.com/joseki/
 Project: https://github.com/online-go/online-go.com
 Snapshot retrieved: 14 August 2026
 
